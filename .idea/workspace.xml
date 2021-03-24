@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5e9bdcbd-68d7-46ab-aa1b-c4f16111b46f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/dp/algorithm/btree/TreeNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/dp/algorithm/btree/bstree/BinarySortTree.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/dp/algorithm/btree/bstree/DeleteNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/dp/algorithm/linkedlist/AddTwoNumbers.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/dp/algorithm/linkedlist/CopyRandomList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/dp/algorithm/linkedlist/Flatten.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/dp/algorithm/linkedlist/MergeTwoLists.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/dp/algorithm/btree/bstree/ConstructMaximumBinaryTree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -33,12 +27,12 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="gitignore" value="1" />
-          <entry key="java" value="24" />
+          <entry key="java" value="25" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="24" />
+          <entry key="JAVA" value="25" />
           <entry key="PLAIN_TEXT" value="1" />
         </counts>
       </usages-collector>
@@ -46,12 +40,12 @@
         <counts>
           <entry key="dummy" value="16" />
           <entry key="gitignore" value="23" />
-          <entry key="java" value="12115" />
+          <entry key="java" value="12166" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="12115" />
+          <entry key="JAVA" value="12166" />
           <entry key="PLAIN_TEXT" value="39" />
         </counts>
       </usages-collector>
@@ -59,15 +53,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/dp/algorithm/linkedlist/Flatten.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="19" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/dp/algorithm/linkedlist/CopyRandomList.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -128,14 +113,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/dp/algorithm/btree/bstree/DeleteNode.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="447">
-              <caret line="54" column="5" lean-forward="true" selection-start-line="15" selection-start-column="4" selection-end-line="54" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="180">
+              <caret line="38" column="28" selection-start-line="38" selection-start-column="28" selection-end-line="38" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/dp/algorithm/btree/bstree/ConstructMaximumBinaryTree.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="12" column="18" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -213,6 +204,7 @@
         <option value="$PROJECT_DIR$/src/com/dp/algorithm/btree/TreeNode.java" />
         <option value="$PROJECT_DIR$/src/com/dp/algorithm/btree/bstree/BinarySortTree.java" />
         <option value="$PROJECT_DIR$/src/com/dp/algorithm/btree/bstree/DeleteNode.java" />
+        <option value="$PROJECT_DIR$/src/com/dp/algorithm/btree/bstree/ConstructMaximumBinaryTree.java" />
       </list>
     </option>
   </component>
@@ -222,7 +214,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
+  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
     <option name="y" value="23" />
     <option name="width" value="1440" />
     <option name="height" value="819" />
@@ -278,7 +270,7 @@
     <property name="SearchEverywhereHistoryKey" value="treemap&#9;PSI&#9;JAVA://java.util.TreeMap&#10;linked&#9;FILE&#9;jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_162.jdk/Contents/Home/src.zip!/java/util/LinkedList.java&#10;stack&#9;PSI&#9;JAVA://java.util.Stack" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1616594744207" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1616597075694" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -343,15 +335,15 @@
       <workItem from="1614602145096" duration="3165000" />
       <workItem from="1614861285463" duration="1985000" />
       <workItem from="1614944808423" duration="3834000" />
-      <workItem from="1616503179908" duration="10044000" />
+      <workItem from="1616503179908" duration="11459000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27836000" />
+    <option name="totallyTimeSpent" value="29251000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6363636" visible="true" weight="0.2639485" />
@@ -556,11 +548,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/dp/algorithm/btree/bstree/DeleteNode.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="447">
-          <caret line="54" column="5" lean-forward="true" selection-start-line="15" selection-start-column="4" selection-end-line="54" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="180">
+          <caret line="38" column="28" selection-start-line="38" selection-start-column="28" selection-end-line="38" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/dp/algorithm/btree/bstree/ConstructMaximumBinaryTree.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="18" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
         </state>
       </provider>
     </entry>
