@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5e9bdcbd-68d7-46ab-aa1b-c4f16111b46f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/dp/algorithm/IsBalanced.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dp/algorithm/IsBalanced.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/dp/algorithm/IsBalanced.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -47,12 +46,12 @@
         <counts>
           <entry key="dummy" value="16" />
           <entry key="gitignore" value="23" />
-          <entry key="java" value="14427" />
+          <entry key="java" value="14465" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="14427" />
+          <entry key="JAVA" value="14465" />
           <entry key="PLAIN_TEXT" value="39" />
         </counts>
       </usages-collector>
@@ -63,7 +62,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/dp/algorithm/btree/bstree/BinarySortTree.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4890">
+            <state>
               <caret line="340" column="33" selection-start-line="340" selection-start-column="33" selection-end-line="340" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -106,20 +105,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/dp/algorithm/IsBalanced.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="522">
-              <caret line="67" column="22" selection-start-line="67" selection-start-column="22" selection-end-line="67" selection-end-column="22" />
+            <state relative-caret-position="162">
+              <caret line="43" column="7" lean-forward="true" selection-start-line="43" selection-start-column="7" selection-end-line="43" selection-end-column="7" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_162.jdk/Contents/Home/src.zip!/java/util/Queue.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="413">
-              <caret line="180" column="12" selection-start-line="180" selection-start-column="12" selection-end-line="180" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -263,7 +253,7 @@
     <property name="SearchEverywhereHistoryKey" value="treemap&#9;PSI&#9;JAVA://java.util.TreeMap&#10;linked&#9;FILE&#9;jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_162.jdk/Contents/Home/src.zip!/java/util/LinkedList.java&#10;stack&#9;PSI&#9;JAVA://java.util.Stack" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1616681164323" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1616725227219" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -346,18 +336,18 @@
       <workItem from="1616503179908" duration="12205000" />
       <workItem from="1616660947715" duration="178000" />
       <workItem from="1616661330783" duration="24000" />
-      <workItem from="1616661830019" duration="11173000" />
+      <workItem from="1616661830019" duration="11701000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41372000" />
+    <option name="totallyTimeSpent" value="41900000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6307449" visible="true" weight="0.19527897" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6307449" visible="true" weight="0.19527897" />
       <window_info id="Structure" order="1" sideWeight="0.36925516" side_tool="true" visible="true" weight="0.19527897" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -373,7 +363,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.2180917" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.2180917" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="11" />
       <window_info anchor="bottom" id="FindBugs-IDEA" order="12" />
@@ -507,7 +497,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/dp/algorithm/btree/bstree/BinarySortTree.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4890">
+        <state>
           <caret line="340" column="33" selection-start-line="340" selection-start-column="33" selection-end-line="340" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -570,15 +560,15 @@
     </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_162.jdk/Contents/Home/src.zip!/java/util/Queue.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="413">
-          <caret line="180" column="12" selection-start-line="180" selection-start-column="12" selection-end-line="180" selection-end-column="12" />
+        <state relative-caret-position="194">
+          <caret line="198" column="6" selection-start-line="198" selection-start-column="6" selection-end-line="198" selection-end-column="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/dp/algorithm/IsBalanced.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="67" column="22" selection-start-line="67" selection-start-column="22" selection-end-line="67" selection-end-column="22" />
+        <state relative-caret-position="162">
+          <caret line="43" column="7" lean-forward="true" selection-start-line="43" selection-start-column="7" selection-end-line="43" selection-end-column="7" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

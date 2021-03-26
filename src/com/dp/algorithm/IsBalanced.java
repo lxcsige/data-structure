@@ -51,7 +51,8 @@ public class IsBalanced {
         queue.offer(root);
         int height = 1;
         while (!queue.isEmpty()) {
-            for (int i = 0; i < queue.size(); i++) {
+            int length = queue.size();
+            for (int i = 0; i < length; i++) {
                 TreeNode node = queue.poll();
                 if (node.left != null) {
                     queue.offer(node.left);
