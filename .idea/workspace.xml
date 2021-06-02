@@ -2,53 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="53f2988e-d945-456c-8f9f-9dcaeb81db76" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/data-structure/com/dp/algorithm/linkedlist/AddTwoNumbers.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/data-structure/com/dp/algorithm/linkedlist/CopyRandomList$Node.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/data-structure/com/dp/algorithm/linkedlist/CopyRandomList.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/data-structure/com/dp/algorithm/linkedlist/Flatten$Node.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/data-structure/com/dp/algorithm/linkedlist/Flatten.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/data-structure/com/dp/algorithm/linkedlist/HasCycle.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/data-structure/com/dp/algorithm/linkedlist/IntersectionNode.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/data-structure/com/dp/algorithm/linkedlist/ListNode.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/data-structure/com/dp/algorithm/linkedlist/MergeTwoLists.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/data-structure/com/dp/algorithm/linkedlist/MyLinkedList.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/data-structure/com/dp/algorithm/linkedlist/Node.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/data-structure/com/dp/algorithm/linkedlist/RemoveElements.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/data-structure/com/dp/algorithm/linkedlist/RemoveNthFromEnd.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/data-structure/com/dp/algorithm/linkedlist/ReverseList.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/data-structure/com/dp/algorithm/sort/HeapSort.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/data-structure/com/dp/algorithm/sort/QuickSort.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/description.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/project-template.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/thriftCompiler.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data-structure.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/dp/algorithm/binarytree/BuildTree.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/dp/algorithm/binarytree/ConstructMaximumBinaryTree.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/dp/algorithm/binarytree/IsBalanced.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/dp/algorithm/binarytree/LowestCommonAncestor.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/dp/algorithm/binarytree/NestedInteger.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/dp/algorithm/binarytree/NestedIterator.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/dp/algorithm/binarytree/Serialize.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/dp/algorithm/binarytree/bsttree/BinarySortTree.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/dp/algorithm/binarytree/bsttree/DeleteNode.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/dp/algorithm/binarytree/bsttree/InsertIntoBST.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/dp/algorithm/binarytree/bsttree/IsValidBST.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/dp/algorithm/binarytree/bsttree/SearchBST.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/dp/algorithm/design/LRUCache.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/dp/algorithm/dp/CoinChange.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/dp/algorithm/linkedlist/AddTwoNumbers.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/dp/algorithm/linkedlist/CopyRandomList.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/dp/algorithm/linkedlist/Flatten.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/dp/algorithm/linkedlist/MergeTwoLists.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/dp/algorithm/sort/HeapSort.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/dp/algorithm/sort/QuickSort.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/dp/algorithm/binarytree/TreeNode.java" afterPath="$PROJECT_DIR$/src/com/dp/algorithm/binarytree/TreeNode.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/dp/algorithm/dp/MaxSubArray.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/dp/algorithm/dp/subSequence/LengthOfLIS.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/dp/algorithm/dp/subSequence/LongestCommonSubSequence.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/dp/algorithm/dp/subSequence/LongestPalindromeSubseq.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/dp/algorithm/dp/subSequence/MaxEnvelopes.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/dp/algorithm/dp/subSequence/MinDistance.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/dp/algorithm/dp/subSequence/MinEditDistance.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/dp/algorithm/dp/subSequence/MinimumDeleteSum.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -63,109 +25,143 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="IsValidBST.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/dp/algorithm/binarytree/bsttree/IsValidBST.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="22" column="13" lean-forward="false" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NestedIterator.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/dp/algorithm/binarytree/NestedIterator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#552#553#0" expanded="true" />
-                <element signature="e#587#588#0" expanded="true" />
-                <element signature="e#630#631#0" expanded="true" />
-                <element signature="e#662#663#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LowestCommonAncestor.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/dp/algorithm/binarytree/LowestCommonAncestor.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="7" lean-forward="true" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LRUCache.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/dp/algorithm/design/LRUCache.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="13" column="46" lean-forward="true" selection-start-line="13" selection-start-column="46" selection-end-line="13" selection-end-column="46" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LinkedList.java" pinned="false" current-in-tab="false">
-        <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_241.jdk/Contents/Home/src.zip!/java/util/LinkedList.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="149" column="5" lean-forward="true" selection-start-line="149" selection-start-column="5" selection-end-line="149" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LinkedHashMap.java" pinned="false" current-in-tab="false">
-        <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_241.jdk/Contents/Home/src.zip!/java/util/LinkedHashMap.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="241">
-              <caret line="296" column="41" lean-forward="false" selection-start-line="296" selection-start-column="36" selection-end-line="296" selection-end-column="41" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#19667#19668#0" expanded="true" />
-                <element signature="e#19695#19696#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="HashMap.java" pinned="false" current-in-tab="false">
         <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_241.jdk/Contents/Home/src.zip!/java/util/HashMap.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="196">
-              <caret line="683" column="46" lean-forward="true" selection-start-line="682" selection-start-column="45" selection-end-line="683" selection-end-column="46" />
+            <state relative-caret-position="9555">
+              <caret line="683" column="46" lean-forward="false" selection-start-line="682" selection-start-column="45" selection-end-line="683" selection-end-column="46" />
               <folding>
-                <element signature="e#19327#19328#0" expanded="true" />
-                <element signature="e#19410#19411#0" expanded="true" />
-                <element signature="e#24331#24332#0" expanded="true" />
-                <element signature="e#24396#24397#0" expanded="true" />
-                <element signature="e#27879#27922#1" expanded="true" />
+                <element signature="e#0#91536#0" expanded="false" />
+                <element signature="imports" expanded="false" />
+                <element signature="e#12846#12847#0" expanded="false" />
+                <element signature="e#12924#12925#0" expanded="false" />
+                <element signature="e#19103#19104#0" expanded="false" />
+                <element signature="e#19161#19162#0" expanded="false" />
+                <element signature="e#21108#21109#0" expanded="false" />
+                <element signature="e#21135#21136#0" expanded="false" />
+                <element signature="e#21335#21336#0" expanded="false" />
+                <element signature="e#21367#21368#0" expanded="false" />
+                <element signature="e#23630#23631#0" expanded="false" />
+                <element signature="e#23684#23685#0" expanded="false" />
+                <element signature="e#31056#31057#0" expanded="false" />
+                <element signature="e#31094#31095#0" expanded="false" />
+                <element signature="e#36187#36188#0" expanded="false" />
+                <element signature="e#36271#36272#0" expanded="false" />
+                <element signature="e#36323#36324#0" expanded="false" />
+                <element signature="e#36401#36402#0" expanded="false" />
+                <element signature="e#38396#38397#0" expanded="false" />
+                <element signature="e#38476#38477#0" expanded="false" />
+                <element signature="e#40356#40357#0" expanded="false" />
+                <element signature="e#40406#40407#0" expanded="false" />
+                <element signature="e#42126#42127#0" expanded="false" />
+                <element signature="e#42190#42191#0" expanded="false" />
+                <element signature="e#42259#42260#0" expanded="false" />
+                <element signature="e#42335#42336#0" expanded="false" />
+                <element signature="e#55464#55465#0" expanded="false" />
+                <element signature="e#55507#55508#0" expanded="false" />
+                <element signature="e#63546#63547#0" expanded="false" />
+                <element signature="e#63631#63632#0" expanded="false" />
+                <element signature="e#66928#66929#0" expanded="false" />
+                <element signature="e#66985#66986#0" expanded="false" />
+                <element signature="e#67099#67100#0" expanded="false" />
+                <element signature="e#67162#67163#0" expanded="false" />
+                <element signature="e#69028#69029#0" expanded="false" />
+                <element signature="e#69079#69080#0" expanded="false" />
+                <element signature="e#71651#71652#0" expanded="false" />
+                <element signature="e#71733#71734#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CoinChange.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CoinChange.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/dp/algorithm/dp/CoinChange.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="307">
-              <caret line="35" column="9" lean-forward="true" selection-start-line="35" selection-start-column="9" selection-end-line="35" selection-end-column="9" />
+            <state relative-caret-position="270">
+              <caret line="18" column="11" lean-forward="false" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NestedInteger.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/dp/algorithm/binarytree/NestedInteger.java">
+      <file leaf-file-name="LengthOfLIS.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/dp/algorithm/dp/subSequence/LengthOfLIS.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="24" lean-forward="false" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
+            <state relative-caret-position="345">
+              <caret line="23" column="20" lean-forward="true" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MaxEnvelopes.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/dp/algorithm/dp/subSequence/MaxEnvelopes.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="20" column="38" lean-forward="false" selection-start-line="20" selection-start-column="38" selection-end-line="20" selection-end-column="38" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LongestCommonSubSequence.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/dp/algorithm/dp/subSequence/LongestCommonSubSequence.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="420">
+              <caret line="28" column="16" lean-forward="false" selection-start-line="28" selection-start-column="16" selection-end-line="28" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MinDistance.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/dp/algorithm/dp/subSequence/MinDistance.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="390">
+              <caret line="26" column="27" lean-forward="false" selection-start-line="26" selection-start-column="27" selection-end-line="26" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MinEditDistance.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/dp/algorithm/dp/subSequence/MinEditDistance.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1260">
+              <caret line="86" column="54" lean-forward="false" selection-start-line="86" selection-start-column="54" selection-end-line="86" selection-end-column="54" />
+              <folding>
+                <element signature="e#336#337#0" expanded="true" />
+                <element signature="e#411#412#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MaxSubArray.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/dp/algorithm/dp/MaxSubArray.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MinimumDeleteSum.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/dp/algorithm/dp/subSequence/MinimumDeleteSum.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="780">
+              <caret line="52" column="51" lean-forward="false" selection-start-line="52" selection-start-column="51" selection-end-line="52" selection-end-column="51" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LongestPalindromeSubseq.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/dp/algorithm/dp/subSequence/LongestPalindromeSubseq.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="375">
+              <caret line="25" column="55" lean-forward="false" selection-start-line="25" selection-start-column="55" selection-end-line="25" selection-end-column="55" />
               <folding />
             </state>
           </provider>
@@ -226,6 +222,15 @@
         <option value="$PROJECT_DIR$/src/com/dp/algorithm/design/Node.java" />
         <option value="$PROJECT_DIR$/src/com/dp/algorithm/design/LRUCache.java" />
         <option value="$PROJECT_DIR$/src/com/dp/algorithm/dp/CoinChange.java" />
+        <option value="$PROJECT_DIR$/src/com/dp/algorithm/dp/subSequence/LengthOfLIS.java" />
+        <option value="$PROJECT_DIR$/src/com/dp/algorithm/dp/subSequence/LongestCommonSubsequence.java" />
+        <option value="$PROJECT_DIR$/src/com/dp/algorithm/dp/subSequence/LongestCommonSubSequence.java" />
+        <option value="$PROJECT_DIR$/src/com/dp/algorithm/dp/subSequence/MinDistance.java" />
+        <option value="$PROJECT_DIR$/src/com/dp/algorithm/dp/subSequence/MinimumDeleteSum.java" />
+        <option value="$PROJECT_DIR$/src/com/dp/algorithm/dp/subSequence/LongestPalindromeSubseq.java" />
+        <option value="$PROJECT_DIR$/src/com/dp/algorithm/dp/subSequence/MinEditDistance.java" />
+        <option value="$PROJECT_DIR$/src/com/dp/algorithm/dp/MaxSubArray.java" />
+        <option value="$PROJECT_DIR$/src/com/dp/algorithm/dp/subSequence/MaxEnvelopes.java" />
       </list>
     </option>
   </component>
@@ -261,8 +266,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -339,9 +342,37 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="data-structure" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="data-structure" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="algorithm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="subSequence" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -356,27 +387,7 @@
     <property name="FullScreen" value="true" />
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
-  <component name="RunManager" selected="Application.CoinChange">
-    <configuration default="false" name="CopyList" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.dp.algorithm.linkedlist.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="com.dp.algorithm.linkedlist.CopyList" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="data-structure" />
-      <envs />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Application.MaxEnvelopes">
     <configuration default="false" name="RotateRight" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -445,6 +456,26 @@
         </pattern>
       </extension>
       <option name="MAIN_CLASS_NAME" value="com.dp.algorithm.dp.CoinChange" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="data-structure" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="MaxEnvelopes" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.dp.algorithm.dp.subSequence.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="com.dp.algorithm.dp.subSequence.MaxEnvelopes" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -774,19 +805,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Application.CopyList" />
-      <item index="1" class="java.lang.String" itemvalue="Application.RotateRight" />
-      <item index="2" class="java.lang.String" itemvalue="Application.BuildTree" />
-      <item index="3" class="java.lang.String" itemvalue="Application.Serialize" />
-      <item index="4" class="java.lang.String" itemvalue="Application.CoinChange" />
+      <item index="0" class="java.lang.String" itemvalue="Application.RotateRight" />
+      <item index="1" class="java.lang.String" itemvalue="Application.BuildTree" />
+      <item index="2" class="java.lang.String" itemvalue="Application.Serialize" />
+      <item index="3" class="java.lang.String" itemvalue="Application.CoinChange" />
+      <item index="4" class="java.lang.String" itemvalue="Application.MaxEnvelopes" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.CoinChange" />
-        <item index="1" class="java.lang.String" itemvalue="Application.Serialize" />
-        <item index="2" class="java.lang.String" itemvalue="Application.BuildTree" />
-        <item index="3" class="java.lang.String" itemvalue="Application.RotateRight" />
-        <item index="4" class="java.lang.String" itemvalue="Application.CopyList" />
+        <item index="0" class="java.lang.String" itemvalue="Application.MaxEnvelopes" />
+        <item index="1" class="java.lang.String" itemvalue="Application.CoinChange" />
+        <item index="2" class="java.lang.String" itemvalue="Application.Serialize" />
+        <item index="3" class="java.lang.String" itemvalue="Application.BuildTree" />
+        <item index="4" class="java.lang.String" itemvalue="Application.RotateRight" />
       </list>
     </recent_temporary>
   </component>
@@ -812,16 +843,17 @@
       <workItem from="1615997335890" duration="11215000" />
       <workItem from="1616513482299" duration="17404000" />
       <workItem from="1619266865040" duration="1404000" />
-      <workItem from="1619365285829" duration="13178000" />
+      <workItem from="1619365285829" duration="28407000" />
+      <workItem from="1622647692514" duration="2382000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51520000" />
+    <option name="totallyTimeSpent" value="69131000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -830,15 +862,15 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.329602" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329602" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329602" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28540772" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28898427" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24964234" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39925373" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39925373" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -864,67 +896,11 @@
           <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="10" />
+      <option name="time" value="11" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/dp/algorithm/linkedlist/CopyList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="36" column="42" lean-forward="false" selection-start-line="36" selection-start-column="42" selection-end-line="36" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/dp/algorithm/linkedlist/IntersectionNode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/dp/algorithm/linkedlist/RemoveElements.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/dp/algorithm/linkedlist/RemoveNthFromEnd.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/dp/algorithm/linkedlist/RotateRight.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="41" lean-forward="false" selection-start-line="12" selection-start-column="41" selection-end-line="12" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/dp/algorithm/linkedlist/IsPalindrome.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="34" column="5" lean-forward="false" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/dp/algorithm/slidingwindow/lengthOfLongestSubstring.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="587">
-          <caret line="48" column="22" lean-forward="true" selection-start-line="48" selection-start-column="22" selection-end-line="48" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/dp/algorithm/linkedlist/ReverseList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="84" column="21" lean-forward="true" selection-start-line="84" selection-start-column="21" selection-end-line="84" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/dp/algorithm/linkedlist/ReverseKGroup.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
@@ -1078,7 +1054,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3330">
           <caret line="251" column="25" lean-forward="false" selection-start-line="251" selection-start-column="25" selection-end-line="251" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1086,7 +1061,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1125">
           <caret line="75" column="5" lean-forward="false" selection-start-line="60" selection-start-column="4" selection-end-line="75" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1094,9 +1068,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="705">
           <caret line="49" column="9" lean-forward="false" selection-start-line="49" selection-start-column="9" selection-end-line="49" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1104,21 +1075,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="465">
           <caret line="39" column="25" lean-forward="false" selection-start-line="39" selection-start-column="25" selection-end-line="39" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#271#272#0" expanded="false" />
-            <element signature="e#298#299#0" expanded="false" />
-            <element signature="e#328#329#0" expanded="false" />
-            <element signature="e#358#359#0" expanded="false" />
-            <element signature="e#620#621#0" expanded="false" />
-            <element signature="e#649#650#0" expanded="false" />
-            <element signature="e#878#879#0" expanded="false" />
-            <element signature="e#908#909#0" expanded="false" />
-            <element signature="e#1151#1152#0" expanded="false" />
-            <element signature="e#1191#1192#0" expanded="false" />
-            <element signature="e#4984#4985#0" expanded="false" />
-            <element signature="e#5028#5029#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1126,7 +1082,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="465">
           <caret line="31" column="27" lean-forward="false" selection-start-line="31" selection-start-column="27" selection-end-line="31" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1134,7 +1089,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
           <caret line="34" column="5" lean-forward="false" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1142,10 +1096,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="18" column="11" lean-forward="false" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
-          <folding>
-            <element signature="e#218#219#0" expanded="false" />
-            <element signature="e#248#249#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1153,7 +1103,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="885">
           <caret line="59" column="20" lean-forward="false" selection-start-line="49" selection-start-column="8" selection-end-line="59" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1161,7 +1110,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="512">
           <caret line="52" column="0" lean-forward="false" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1169,7 +1117,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="22" column="13" lean-forward="false" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1177,7 +1124,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="14" column="24" lean-forward="false" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1185,13 +1131,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
           <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#552#553#0" expanded="true" />
-            <element signature="e#587#588#0" expanded="true" />
-            <element signature="e#630#631#0" expanded="true" />
-            <element signature="e#662#663#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1199,7 +1138,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="12" column="7" lean-forward="true" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1207,7 +1145,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="258">
           <caret line="374" column="14" lean-forward="false" selection-start-line="374" selection-start-column="14" selection-end-line="374" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1215,7 +1152,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="149" column="5" lean-forward="true" selection-start-line="149" selection-start-column="5" selection-end-line="149" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1223,58 +1159,139 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="241">
           <caret line="296" column="41" lean-forward="false" selection-start-line="296" selection-start-column="36" selection-end-line="296" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#19667#19668#0" expanded="true" />
-            <element signature="e#19695#19696#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/dp/algorithm/design/DoublyLinkedList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/dp/algorithm/design/Node.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="1" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="24" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/dp/algorithm/design/DoublyLinkedList.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/dp/algorithm/design/Node.java" />
     <entry file="file://$PROJECT_DIR$/src/com/dp/algorithm/design/LRUCache.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="13" column="46" lean-forward="true" selection-start-line="13" selection-start-column="46" selection-end-line="13" selection-end-column="46" />
+        <state relative-caret-position="180">
+          <caret line="13" column="46" lean-forward="false" selection-start-line="13" selection-start-column="46" selection-end-line="13" selection-end-column="46" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_241.jdk/Contents/Home/src.zip!/java/util/HashMap.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="683" column="46" lean-forward="true" selection-start-line="682" selection-start-column="45" selection-end-line="683" selection-end-column="46" />
+        <state relative-caret-position="9555">
+          <caret line="683" column="46" lean-forward="false" selection-start-line="682" selection-start-column="45" selection-end-line="683" selection-end-column="46" />
           <folding>
-            <element signature="e#19327#19328#0" expanded="true" />
-            <element signature="e#19410#19411#0" expanded="true" />
-            <element signature="e#24331#24332#0" expanded="true" />
-            <element signature="e#24396#24397#0" expanded="true" />
-            <element signature="e#27879#27922#1" expanded="true" />
+            <element signature="e#0#91536#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#12846#12847#0" expanded="false" />
+            <element signature="e#12924#12925#0" expanded="false" />
+            <element signature="e#19103#19104#0" expanded="false" />
+            <element signature="e#19161#19162#0" expanded="false" />
+            <element signature="e#21108#21109#0" expanded="false" />
+            <element signature="e#21135#21136#0" expanded="false" />
+            <element signature="e#21335#21336#0" expanded="false" />
+            <element signature="e#21367#21368#0" expanded="false" />
+            <element signature="e#23630#23631#0" expanded="false" />
+            <element signature="e#23684#23685#0" expanded="false" />
+            <element signature="e#31056#31057#0" expanded="false" />
+            <element signature="e#31094#31095#0" expanded="false" />
+            <element signature="e#36187#36188#0" expanded="false" />
+            <element signature="e#36271#36272#0" expanded="false" />
+            <element signature="e#36323#36324#0" expanded="false" />
+            <element signature="e#36401#36402#0" expanded="false" />
+            <element signature="e#38396#38397#0" expanded="false" />
+            <element signature="e#38476#38477#0" expanded="false" />
+            <element signature="e#40356#40357#0" expanded="false" />
+            <element signature="e#40406#40407#0" expanded="false" />
+            <element signature="e#42126#42127#0" expanded="false" />
+            <element signature="e#42190#42191#0" expanded="false" />
+            <element signature="e#42259#42260#0" expanded="false" />
+            <element signature="e#42335#42336#0" expanded="false" />
+            <element signature="e#55464#55465#0" expanded="false" />
+            <element signature="e#55507#55508#0" expanded="false" />
+            <element signature="e#63546#63547#0" expanded="false" />
+            <element signature="e#63631#63632#0" expanded="false" />
+            <element signature="e#66928#66929#0" expanded="false" />
+            <element signature="e#66985#66986#0" expanded="false" />
+            <element signature="e#67099#67100#0" expanded="false" />
+            <element signature="e#67162#67163#0" expanded="false" />
+            <element signature="e#69028#69029#0" expanded="false" />
+            <element signature="e#69079#69080#0" expanded="false" />
+            <element signature="e#71651#71652#0" expanded="false" />
+            <element signature="e#71733#71734#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/dp/algorithm/dp/CoinChange.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="307">
-          <caret line="35" column="9" lean-forward="true" selection-start-line="35" selection-start-column="9" selection-end-line="35" selection-end-column="9" />
+        <state relative-caret-position="270">
+          <caret line="18" column="11" lean-forward="false" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/dp/algorithm/dp/subSequence/MinDistance.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="27" lean-forward="false" selection-start-line="26" selection-start-column="27" selection-end-line="26" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/dp/algorithm/dp/subSequence/MinimumDeleteSum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="780">
+          <caret line="52" column="51" lean-forward="false" selection-start-line="52" selection-start-column="51" selection-end-line="52" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/dp/algorithm/dp/subSequence/LongestPalindromeSubseq.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="55" lean-forward="false" selection-start-line="25" selection-start-column="55" selection-end-line="25" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/dp/algorithm/dp/subSequence/LongestCommonSubSequence.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="28" column="16" lean-forward="false" selection-start-line="28" selection-start-column="16" selection-end-line="28" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/dp/algorithm/dp/subSequence/MinEditDistance.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1260">
+          <caret line="86" column="54" lean-forward="false" selection-start-line="86" selection-start-column="54" selection-end-line="86" selection-end-column="54" />
+          <folding>
+            <element signature="e#336#337#0" expanded="true" />
+            <element signature="e#411#412#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/dp/algorithm/dp/MaxSubArray.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/dp/algorithm/dp/subSequence/MaxEnvelopes.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="20" column="38" lean-forward="false" selection-start-line="20" selection-start-column="38" selection-end-line="20" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/dp/algorithm/dp/subSequence/LengthOfLIS.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="20" lean-forward="true" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
           <folding />
         </state>
       </provider>
