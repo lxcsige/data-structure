@@ -1,4 +1,4 @@
-package com.dp.algorithm.dp;
+package com.dp.algorithm.dp.knapsack;
 
 import java.util.Arrays;
 
