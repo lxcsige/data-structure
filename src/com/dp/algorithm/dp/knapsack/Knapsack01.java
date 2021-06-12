@@ -61,4 +61,24 @@ public class Knapsack01 {
 
         return dp[n][v];
     }
+
+    /**
+     * 从后向前遍历，状态压缩
+     *
+     * @param n
+     * @param v
+     * @param w
+     * @param c
+     * @return
+     */
+    public int maxValue2(int n, int v, int[] w, int[] c) {
+        int[] dp = new int[v+1];
+        for(int i = 1; i <= n; i++) {
+            for (int j = v; j >= w[i-1]; j--) {
+                dp[j] = Math.max(dp[j], dp[j-w[i-1]] + c[i-1]);
+            }
+        }
+
+        return dp[v];
+    }
 }
