@@ -1,4 +1,4 @@
-package com.dp.algorithm.dp.coin;
+package com.dp.algorithm.dp.knapsack;
 
 /**
  * 518_零钱兑换2
