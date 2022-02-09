@@ -1,4 +1,4 @@
-package com.dp.algorithm.dp.knapsack;
+package com.dp.algorithm.dp.knapsack.knapsack01;
 
 /**
  * 0-1背包
@@ -36,6 +36,7 @@ public class Knapsack01 {
                 } else {
                     // 不放入：dp[i][j] = dp[i-1][j]
                     // 放入：dp[i][j] = dp[i-1][j-w[i-1]]+c[i-1]
+                    // 对于j == w[i-1]的情况，可以放入，此时总价值 = 放入之前的价值0（放入之前背包容量为0） + 该物品的价值
                     dp[i][j] = Math.max(dp[i-1][j], dp[i-1][j-w[i-1]] + c[i-1]);
                 }
             }
