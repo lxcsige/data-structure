@@ -1,7 +1,7 @@
 package com.dp.algorithm.dp.knapsack;
 
 /**
- * 01背包
+ * 0-1背包
  *
  * @author liuxucheng
  * @since 2021/6/6
@@ -14,41 +14,42 @@ public class Knapsack01 {
     }
 
     /**
-     * dp[i][j] = max(dp[i-1][j], dp[i-1][j-w[i-1]] + c[i-1])
-     * 变量：物品+容量，选择：装或者不装
+     * dp[i][j] = max(dp[i-1][j], dp[i-1][j-w[i-1]] + c[i-1])，j >= w[i-1]
+     * 状态参数：物品和容量，决策：装/不装
      *
-     * @param n
-     * @param v
-     * @param w
-     * @param c
+     * @param n 物品数量
+     * @param v 背包容量
+     * @param w 物品重量数组
+     * @param c 物品价值数组
      * @return
      */
     public int maxValue(int n, int v, int[] w, int[] c) {
         // dp[i][j]表示前i个物品放到最大容量为j的背包里的最大价值
         int[][] dp = new int[n+1][v+1];
+        // 遍历物品
         for (int i = 1; i <= n; i++) {
+            // 遍历背包容量
             for (int j = 1; j <= v; j++) {
+                // w[i-1]表示第i件物品的重量，如果背包容量小于该物品的重量，则不能放入
                 if (j < w[i-1]) {
                     dp[i][j] = dp[i-1][j];
                 } else {
+                    // 不放入：dp[i][j] = dp[i-1][j]
+                    // 放入：dp[i][j] = dp[i-1][j-w[i-1]]+c[i-1]
                     dp[i][j] = Math.max(dp[i-1][j], dp[i-1][j-w[i-1]] + c[i-1]);
                 }
             }
         }
 
-        for (int i = 1; i <= n; i++) {
-            for (int j = 1; j <= v; j++) {
-                System.out.print(dp[i][j] + " ");
-            }
-            System.out.println();
-        }
-
+        // 哪些物品被放入
         int[] item = new int[n];
         for (int i = n; i > 0;) {
             for (int j = v; j > 0;) {
+                // 不放入，标记为0
                 if (dp[i][j] == dp[i-1][j]) {
                     item[--i] = 0;
                 } else if (j >= w[i-1] && dp[i][j] == dp[i-1][j-w[i-1]] + c[i-1]) {
+                    // 放入，标记为1
                     j -= w[i -1];
                     item[--i] = 1;
                 }
@@ -63,7 +64,7 @@ public class Knapsack01 {
     }
 
     /**
-     * 从后向前遍历，状态压缩
+     * 状态压缩，二维 -> 一维
      *
      * @param n
      * @param v
@@ -73,7 +74,9 @@ public class Knapsack01 {
      */
     public int maxValue2(int n, int v, int[] w, int[] c) {
         int[] dp = new int[v+1];
+        // 遍历每件物品
         for(int i = 1; i <= n; i++) {
+            // 逆序遍历背包容量
             for (int j = v; j >= w[i-1]; j--) {
                 dp[j] = Math.max(dp[j], dp[j-w[i-1]] + c[i-1]);
             }
