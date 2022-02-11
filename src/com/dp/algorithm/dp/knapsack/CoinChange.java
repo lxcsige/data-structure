@@ -3,7 +3,7 @@ package com.dp.algorithm.dp.knapsack;
 import java.util.Arrays;
 
 /**
- * 322-零钱兑换
+ * 322-零钱兑换，求最少硬币数
  *
  * @author xucheng.liu
  * @since 2021/5/18
