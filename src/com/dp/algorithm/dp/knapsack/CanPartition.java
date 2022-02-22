@@ -24,6 +24,7 @@ public class CanPartition {
             return false;
         }
 
+        // 求sum/2
         int sum = 0;
         for (int num : nums) {
             sum += num;
@@ -40,7 +41,6 @@ public class CanPartition {
         // 边界
         for (int i = 0; i < nums.length; i++) {
             // 其实就是j = nums[i]这种特殊情况，可以理解为nums[i]为单独一组，其他元素为另外一组，符合题意
-            // 如果仍然不能理解，可以画图
             dp[i][0] = true;
         }
 
