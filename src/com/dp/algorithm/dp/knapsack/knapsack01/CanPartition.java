@@ -1,4 +1,4 @@
-package com.dp.algorithm.dp.knapsack;
+package com.dp.algorithm.dp.knapsack.knapsack01;
 
 /**
  * 416_分割等和子集
@@ -14,7 +14,7 @@ public class CanPartition {
 
     /**
      * DP，转化为01背包问题
-     * 难点在于理解边界
+     * 难点在于理解边界，需要从状态转移方程推导初始化状态
      *
      * @param nums
      * @return
@@ -37,11 +37,15 @@ public class CanPartition {
         // dp[i][j]表示nums[0...i]中是否存在和为j的子集
         // 状态转移方程：dp[i][j] = dp[i-1][j] || dp[i-1][j-nums[i]]
         // 如果dp[i-1][j]为true，则dp[i][j]一定为true，在二维数组上的表现就是一列元素都是true
+        // 对于这种返回boolean的问题，没必要将dp数组的行数设为nums.length+1
         boolean[][] dp = new boolean[nums.length][target + 1];
         // 边界
         for (int i = 0; i < nums.length; i++) {
-            // 其实就是j = nums[i]这种特殊情况，可以理解为nums[i]为单独一组，其他元素为另外一组，符合题意
+            // 其实就是j = nums[i]这种特殊情况，即nums[i]刚好可以放到容积为j的背包中，从背包问题的角度来看是符合题意的
             dp[i][0] = true;
+        }
+        if (nums[0] <= target) {
+            dp[0][nums[0]] = true;
         }
 
         for (int i = 1; i < nums.length; i++) {
@@ -50,6 +54,11 @@ public class CanPartition {
                     dp[i][j] = dp[i-1][j];
                 } else {
                     dp[i][j] = dp[i-1][j] || dp[i-1][j-nums[i]];
+                }
+
+                // 剪枝
+                if (dp[i][target]) {
+                    return true;
                 }
             }
         }
@@ -83,10 +92,18 @@ public class CanPartition {
         boolean[] dp = new boolean[target + 1];
         // 边界
         dp[0] = true;
+        if (nums[0] <= target) {
+            dp[nums[0]] = true;
+        }
 
+        // 对于二维数组，外层从上往下
         for (int i = 1; i < nums.length; i++) {
-            // 倒序便利，如果正序遍历需要用到之前的元素，而之前元素已经被更新过了
+            // 内层从后往前，若j < nums[i]则无法放入，dp[j]不会更新，因此可以提前结束
             for (int j = target; j >= nums[i]; j--) {
+                // 剪枝
+                if (dp[target]) {
+                    return true;
+                }
                 dp[j] = dp[j] || dp[j-nums[i]];
             }
         }
