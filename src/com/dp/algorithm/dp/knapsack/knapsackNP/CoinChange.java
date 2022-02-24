@@ -1,4 +1,4 @@
-package com.dp.algorithm.dp.knapsack;
+package com.dp.algorithm.dp.knapsack.knapsackNP;
 
 import java.util.Arrays;
 
@@ -126,7 +126,8 @@ public class CoinChange {
     }
 
     /**
-     * 动态规划_v2
+     * 动态规划_v2，其实就是完全背包压缩状态之后的解法
+     * 注意点在于边界，dp[0] = 0，即目标金额为0时不需要任何硬币就可以凑出来
      *
      * @param coins
      * @param amount
@@ -138,7 +139,7 @@ public class CoinChange {
             // 相当于初始化为正无穷
             dp[i] = amount + 1;
             for (int coin : coins) {
-                // 目标金额不小于硬币面值
+                // 目标金额不小于硬币面ggp值
                 if (i >= coin) {
                     dp[i] = Math.min(dp[i], dp[i - coin] + 1);
                 }
