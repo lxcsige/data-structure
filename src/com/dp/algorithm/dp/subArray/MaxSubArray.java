@@ -1,7 +1,7 @@
 package com.dp.algorithm.dp.subArray;
 
 /**
- * 53_最大子数组和
+ * 53_最大子数组和_简单
  *
  * @author liuxucheng
  * @since 2021/5/26
@@ -39,7 +39,7 @@ public class MaxSubArray {
     }
 
     /**
-     * 动态规划_v2，时间复杂度O(n)，空间复杂度O(1)
+     * 动态规划_v2，时间复杂度O(n)，空间复杂度O(1)，状态压缩
      *
      * @param nums
      * @return

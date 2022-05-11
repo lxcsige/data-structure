@@ -16,6 +16,7 @@ public class RemoveNthFromEnd {
         ListNode dummy = new ListNode(-1, head);
         ListNode p = dummy;
         ListNode q = dummy;
+        // q多走n步，当q达到尾节点时，p刚好处于倒数第n+1个节点
         while (n-- > 0) {
             q = q.next;
             if (q == null) {

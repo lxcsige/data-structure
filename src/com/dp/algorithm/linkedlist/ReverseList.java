@@ -21,14 +21,12 @@ public class ReverseList {
      * @return
      */
     public static ListNode reverseList1(ListNode head) {
-        ListNode prev = null;
-        ListNode cur = head;
-        ListNode temp;
+        ListNode prev = null, cur = head, next;
         while (cur != null) {
-            temp = cur.next;
+            next = cur.next;
             cur.next = prev;
             prev =cur;
-            cur = temp;
+            cur = next;
         }
         return prev;
     }

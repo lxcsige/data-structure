@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Least Recently Used Cache
+ * LRU
  *
  * @author liuxucheng
  * @since 2021/5/11
@@ -13,8 +13,14 @@ public class LRUCache {
 
     private Map<Integer, Node> cache = new HashMap<>();
 
+    /**
+     * 当前数量
+     */
     private int size;
 
+    /**
+     * 容量
+     */
     private int capacity;
 
     // dummy head
@@ -37,7 +43,8 @@ public class LRUCache {
         if (node == null) {
             return -1;
         }
-        // 如果存在则移动到双向链表头部
+        // 如果存在则移动到双向链表头部，包含remove和add2Head两步操作
+        // 节点可能在链表中间，使用双向链表效率更高，因此Node中包含prev指针
         move2Head(node);
         return node.value;
     }
@@ -48,7 +55,9 @@ public class LRUCache {
         if (node == null) {
             // 插入之前容量已满，删除尾部节点
             if (size == capacity) {
+                // 删除尾节点
                 Node tail = removeTail();
+                // 同时需要从map中删除，因此node中需要包含key
                 cache.remove(tail.key);
                 size--;
             }
@@ -87,15 +96,15 @@ public class LRUCache {
         add2Head(node);
     }
 
-    public class Node {
+    public static class Node {
 
-        int key;
+        private int key;
 
-        int value;
+        private int value;
 
-        Node prev;
+        private Node prev;
 
-        Node next;
+        private Node next;
 
         public Node() {
 

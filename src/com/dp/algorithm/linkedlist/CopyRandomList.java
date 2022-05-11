@@ -1,5 +1,8 @@
 package com.dp.algorithm.linkedlist;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * 复制随机指针链表
  *
@@ -12,12 +15,51 @@ public class CopyRandomList {
 
     }
 
+    private Map<Node, Node> map = new HashMap<>();
+
+    /**
+     * 递归+备忘录
+     *
+     * @param head
+     * @return
+     */
     public Node copyRandomList(Node head) {
         if (head == null) {
             return null;
         }
 
-        return null;
+        if (!map.containsKey(head)) {
+            Node newHead = new Node(head.val);
+            map.put(head, newHead);
+            newHead.next = copyRandomList(head.next);
+            newHead.random = copyRandomList(head.random);
+        }
+
+        return map.get(head);
+    }
+
+    public Node copyRandomList2(Node head) {
+        if (head == null) {
+            return null;
+        }
+
+        Map<Node, Node> map = new HashMap<>();
+        Node cur = head;
+        while (cur != null) {
+            Node newCur = new Node(cur.val);
+            map.put(cur, newCur);
+            cur = cur.next;
+        }
+
+        // 设置next和random
+        cur = head;
+        while (cur != null) {
+            map.get(cur).next=map.get(cur.next);
+            map.get(cur).random=map.get(cur.random);
+            cur = cur.next;
+        }
+
+        return map.get(head);
     }
 
     class Node {

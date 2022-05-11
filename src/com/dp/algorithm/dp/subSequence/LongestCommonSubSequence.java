@@ -1,7 +1,7 @@
 package com.dp.algorithm.dp.subSequence;
 
 /**
- * 1143_最长公共子序列
+ * 1143_最长公共子序列_中等
  *
  * @author liuxucheng
  * @since 2021/5/20

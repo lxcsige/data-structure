@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * 300_最长递增子序列
+ * 300_最长递增子序列_中等
  *
  * @author liuxucheng
  * @since 2021/5/20

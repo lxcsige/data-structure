@@ -7,10 +7,18 @@ package com.dp.algorithm.linkedlist;
 public class ReverseKGroup {
 
     public static void main(String[] args) {
-
+        ListNode n1 =  new ListNode(1);
+        ListNode n2 =  new ListNode(2);
+        ListNode n3 =  new ListNode(3);
+        ListNode n4 =  new ListNode(4);
+        ListNode n5 =  new ListNode(5);
+        n1.next = n2;
+        n2.next = n3;
+        n3.next = n4;
+        n4.next = n5;
     }
 
-    private ListNode reverseKGroup(ListNode head, int k) {
+    public ListNode reverseKGroup(ListNode head, int k) {
         if (head == null) {
             return null;
         }
@@ -39,5 +47,32 @@ public class ReverseKGroup {
         }
 
         return pre;
+    }
+
+    public static ListNode reverseGroup2(ListNode head, int k) {
+        ListNode dummy = new ListNode(-1, head);
+        ListNode prev = dummy, cur = head, next, knext = dummy;
+
+        while (cur != null) {
+            // 判断剩余节点个数
+            for (int i = 0; i < k; i++) {
+                knext = knext.next;
+                // 不足k个，跳出循环
+                if (knext == null) {
+                    return dummy.next;
+                }
+            }
+            // 翻转k个节点
+            for (int i = 0; i < k-1; i++) {
+                next = cur.next;
+                cur.next = next.next;
+                next.next = prev.next;
+                prev.next = next;
+            }
+            prev = cur;
+            cur = cur.next;
+        }
+
+        return dummy.next;
     }
 }

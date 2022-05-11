@@ -1,7 +1,7 @@
 package com.dp.algorithm.dp.subArray;
 
 /**
- * 152_乘积最大子数组
+ * 152_乘积最大子数组_中等
  *
  * @author xucheng.liu
  * @since 2022/2/7

@@ -11,12 +11,44 @@ import java.util.Set;
  * @author liuxucheng
  * @since 2021/3/18
  */
-public class lengthOfLongestSubstring {
+public class LengthOfLongestSubstring {
 
     public static void main(String[] args) {
-
+        lengthOfLongestSubString("pwwkew");
     }
 
+    /**
+     * 暴力解法，时间复杂度O(n^2)
+     *
+     * @param s
+     * @return
+     */
+    private static int lengthOfLongestSubString(String s) {
+        if (s.length() == 0 || s.length() == 1) {
+            return s.length();
+        }
+
+        int res = 0;
+        // i：左边界，j：右边界，k：遍历指针
+        // 从左边界开始依次同右边界元素进行比较，如果相同，将左边界右移至遍历指针的后一位
+        for (int i = 0, j = 1; j < s.length(); j++) {
+            for (int k = i; k < j; k++) {
+                if (s.charAt(k) == s.charAt(j)) {
+                    i = k + 1;
+                }
+            }
+            res = Math.max(res, j - i + 1);
+        }
+
+        return res;
+    }
+
+    /**
+     * 滑动窗口
+     *
+     * @param s
+     * @return
+     */
     private static int lengthOfLongestSubstring1(String s) {
         Set<Character> set = new HashSet<>();
         // 滑动窗口右边界
