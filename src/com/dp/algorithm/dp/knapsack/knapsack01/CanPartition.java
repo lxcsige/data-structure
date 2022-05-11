@@ -24,6 +24,7 @@ public class CanPartition {
             return false;
         }
 
+        // 求sum/2
         int sum = 0;
         for (int num : nums) {
             sum += num;

@@ -7,15 +7,14 @@ package com.dp.algorithm.dp;
 public class MaxSumDivThree {
 
     public static void main(String[] args) {
-
+        maxSumDivThree(new int[]{2,19,6,16,5,10,7,4,11,6});
     }
 
-    public int maxSumDivThree(int[] nums) {
-        // dp[i][j]表示[0...i]除3余j的最大和
+    public static int maxSumDivThree(int[] nums) {
         int[][] dp = new int[nums.length][3];
 
         // 初始状态
-        dp[0][nums[0] % 3] = nums[0];
+        dp[0][nums[0]%3] = nums[0];
 
         int rest;
         for (int i = 1; i < nums.length; i++) {
