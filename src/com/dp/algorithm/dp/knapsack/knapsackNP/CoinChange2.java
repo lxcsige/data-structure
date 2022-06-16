@@ -1,7 +1,8 @@
 package com.dp.algorithm.dp.knapsack.knapsackNP;
 
 /**
- * 518_零钱兑换2
+ * leetcode_518_零钱兑换2_中等
+ * 求硬币组合数
  *
  * @author liuxucheng
  * @since 2021/6/9

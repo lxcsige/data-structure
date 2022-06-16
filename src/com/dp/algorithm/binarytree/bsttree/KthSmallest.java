@@ -2,9 +2,14 @@ package com.dp.algorithm.binarytree.bsttree;
 
 import com.dp.algorithm.binarytree.TreeNode;
 
+import java.util.Deque;
+import java.util.HashMap;
 import java.util.LinkedList;
+import java.util.Map;
 
 /**
+ * leetcode_230_二叉搜索树中第k小的元素
+ *
  * @author liuxucheng
  * @since 2021/3/23
  */
@@ -31,7 +36,7 @@ public class KthSmallest {
     }
 
     /**
-     * 中序遍历
+     * 中序遍历-递归
      *
      * @param root
      * @param k
@@ -42,14 +47,37 @@ public class KthSmallest {
         }
 
         traverse(root.left, k);
-
         rank++;
         if (k == rank) {
             res = root.val;
             return;
         }
-
         traverse(root.right, k);
+    }
+
+    /**
+     * 中序遍历-迭代
+     *
+     * @param root
+     * @param k
+     * @return
+     */
+    public int kthSmallest2(TreeNode root, int k) {
+        Deque<TreeNode> stack = new LinkedList<>();
+        TreeNode cur = root;
+        while (cur != null || !stack.isEmpty()) {
+            while (cur != null) {
+                stack.push(cur);
+                cur = cur.left;
+            }
+            cur = stack.pop();
+            --k;
+            if (k == 0) {
+                break;
+            }
+            cur = cur.right;
+        }
+        return cur.val;
     }
 
     /**
@@ -74,27 +102,33 @@ public class KthSmallest {
         traverse(root.left, k);
     }
 
-    /**
-     * 迭代
-     *
-     * @param root
-     * @param k
-     * @return
-     */
-    public int kthSmallest2(TreeNode root, int k) {
-        LinkedList<TreeNode> stack = new LinkedList<>();
-        while (true) {
-            while (root != null) {
-                stack.add(root);
-                root = root.left;
-            }
+    private Map<TreeNode, Integer> map = new HashMap<>();
 
-            root = stack.removeLast();
-            if (k-- == 0) {
-                return root.val;
+    public int kthSmallest3(TreeNode root, int k) {
+        pre(root);
+        TreeNode cur = root;
+        while (cur != null) {
+            int left = map.getOrDefault(cur.left, 0);
+            if (left < k - 1) {
+                // 第k个小的元素在右子树中
+                cur = cur.right;
+                k -= (left + 1);
+            } else if (left > k -1) {
+                // 第k个小的元素在左子树中
+                cur = cur.left;
+            } else {
+                break;
             }
-
-            root = root.right;
         }
+        return cur.val;
+    }
+
+    private int pre(TreeNode root) {
+        if (root == null) {
+            return 0;
+        }
+        int res = 1 + pre(root.left) + pre(root.right);
+        map.put(root, res);
+        return res;
     }
 }

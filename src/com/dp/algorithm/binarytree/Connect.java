@@ -4,16 +4,12 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 /**
- * 完美二叉树，连接相邻节点
+ * leetcode_116_填充每个节点的下一个右侧节点指针_中等
  *
  * @author liuxucheng
  * @since 2021/3/19
  */
 public class Connect {
-
-    public static void main(String[] args) {
-
-    }
 
     /**
      * 递归
@@ -50,29 +46,25 @@ public class Connect {
         if (root == null) {
             return null;
         }
-
         Queue<Node> queue = new LinkedList<>();
         queue.offer(root);
-
         while(!queue.isEmpty()) {
             int levelCount = queue.size();
             Node pre = null;
             for (int i = 0; i < levelCount; i++) {
-                Node node = queue.poll();
+                Node cur = queue.poll();
                 if (pre != null) {
-                    pre.next = node;
+                    pre.next = cur;
                 }
-                pre = node;
-
-                if (pre.next != null) {
-                    queue.offer(pre.next);
+                if (cur.left != null) {
+                    queue.offer(cur.left);
                 }
-                if (pre.right != null) {
-                    queue.offer(pre.right);
+                if (cur.right != null) {
+                    queue.offer(cur.right);
                 }
+                pre = cur;
             }
         }
-
         return root;
     }
 
@@ -103,39 +95,25 @@ public class Connect {
     }
 
     /**
-     * 非完美二叉树，迭代，O(1)空间
+     * 递归
      *
      * @param root
      * @return
      */
-    private Node connect4(Node root) {
+    public Node connect4(Node root) {
         if (root == null) {
             return null;
         }
-
-        Node start = root, cur;
-        while (start != null) {
-            cur = start;
-            Node dummy = new Node(-1);
-            Node pre = dummy;
-            while (cur != null) {
-                if (cur.left != null) {
-                    pre.next = cur.left;
-                    pre = pre.next;
-                }
-                if (cur.right != null) {
-                    pre.next = cur.right;
-                    pre = pre.next;
-                }
-                cur = cur.next;
-            }
-            start = dummy.next;
+        if (root.left != null) {
+            root.left.next = root.right;
+            root.right.next = root.next == null ? null : root.next.left;
+            connect4(root.left);
+            connect4(root.right);
         }
-
         return root;
     }
 
-    class Node {
+    private class Node {
 
         int val;
         Node left;

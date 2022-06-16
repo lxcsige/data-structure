@@ -1,10 +1,10 @@
 package com.dp.algorithm.linkedlist;
 
 /**
- * 环形链表
+ * leetcode_141_环形链表_简单
  *
  * @author xucheng.liu
- * @date 2021/3/1
+ * @since 2022/5/11
  */
 public class HasCycle {
 
@@ -18,21 +18,19 @@ public class HasCycle {
      * @param head
      * @return
      */
-    public static ListNode hasCycle(ListNode head) {
-        ListNode slow = head;
-        ListNode fast = head.next;
-        while (slow != fast) {
-            if (fast.next == null || fast.next.next  == null) {
-                return null;
+    public boolean hasCycle(ListNode head) {
+        if (head == null || head.next == null) {
+            return false;
+        }
+
+        ListNode slow = head, fast = head;
+        do {
+            if (fast == null || fast.next == null) {
+                return false;
             }
             slow = slow.next;
             fast = fast.next.next;
-        }
-        fast = head;
-        while (slow != fast) {
-           slow = slow.next;
-           fast = fast.next;
-        }
-        return slow;
+        } while (slow != fast);
+        return true;
     }
 }

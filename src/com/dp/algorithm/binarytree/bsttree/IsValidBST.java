@@ -2,20 +2,27 @@ package com.dp.algorithm.binarytree.bsttree;
 
 import com.dp.algorithm.binarytree.TreeNode;
 
+import java.util.Deque;
+import java.util.LinkedList;
+
 /**
+ * leetcode_98_验证二叉搜索树_中等
+ *
  * @author liuxucheng
  * @since 2021/4/20
  */
 public class IsValidBST {
 
-    private int pre = Integer.MIN_VALUE;
+    /**
+     * 节点最小值可能是-2^31
+     */
+    private long pre = Long.MIN_VALUE;
 
     public static void main(String[] args) {
 
     }
 
     public boolean isValidBST(TreeNode root) {
-//        return inOrder(root);
         return isValidBST(root, Long.MIN_VALUE, Long.MAX_VALUE);
     }
 
@@ -25,25 +32,48 @@ public class IsValidBST {
      * @param root
      * @return
      */
-    private boolean inOrder(TreeNode root) {
+    public boolean isValidBST2(TreeNode root) {
         if (root == null) {
             return true;
         }
 
-        boolean left = inOrder(root.left);
+        boolean left = isValidBST2(root.left);
+        if (!left) {
+            return false;
+        }
 
         if (root.val <= pre) {
             return false;
         }
         pre = root.val;
 
-        boolean right = inOrder(root.right);
+        return isValidBST2(root.right);
+    }
 
-        return left && right;
+    public boolean isValidBST3(TreeNode root) {
+        if (root == null) {
+            return true;
+        }
+
+        Deque<TreeNode> stack = new LinkedList<>();
+        TreeNode cur = root;
+        while (cur != null ||!stack.isEmpty()) {
+            while (cur != null) {
+                stack.push(cur);
+                cur = cur.left;
+            }
+            cur = stack.pop();
+            if (cur.val <= pre) {
+                return false;
+            }
+            pre = cur.val;
+            cur = cur.right;
+        }
+        return true;
     }
 
     /**
-     * 递归，自上而下传递边界值
+     * 前序遍历，自上而下传递边界值
      * 根节点 > 左子树 & 根节点 < 右子树
      *
      * @param root

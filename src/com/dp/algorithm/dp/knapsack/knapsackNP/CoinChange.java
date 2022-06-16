@@ -3,7 +3,8 @@ package com.dp.algorithm.dp.knapsack.knapsackNP;
 import java.util.Arrays;
 
 /**
- * 322-零钱兑换，求最少硬币数
+ * leetcode_322_零钱兑换_中等
+ * 求最少硬币数
  *
  * @author xucheng.liu
  * @since 2021/5/18
@@ -126,7 +127,7 @@ public class CoinChange {
     }
 
     /**
-     * 动态规划_v2，其实就是完全背包压缩状态之后的解法
+     * 动态规划_v2，最优解，其实就是完全背包压缩状态之后的解法
      * 注意点在于边界，dp[0] = 0，即目标金额为0时不需要任何硬币就可以凑出来
      *
      * @param coins
