@@ -54,19 +54,41 @@ public class IsPalindrome {
         return pre;
     }
 
-
-    public boolean isPalindrome2(ListNode head) {
-        front = head;
-        return recursivelyCheck(head);
+    /**
+     * 倒序打印
+     *
+     * @param head
+     */
+    public void reversePrint(ListNode head) {
+        // base case
+        if (head == null) {
+            return;
+        }
+        // 先打印后面的节点
+        reversePrint(head.next);
+        // 最后打印head节点
+        System.out.println(head.val);
     }
 
-    private boolean recursivelyCheck(ListNode head) {
+    /**
+     * 递归
+     *
+     * @param head
+     * @return
+     */
+    public boolean isPalindrome2(ListNode head) {
+        front = head;
+        return check(head);
+    }
+
+    private boolean check(ListNode head) {
         if (head == null) {
             return true;
         }
-        if (!recursivelyCheck(head.next)) {
+        if (!check(head.next)) {
             return false;
         }
+        // 走到这步，front节点已经不等于head了
         if (head.val != front.val) {
             return false;
         }

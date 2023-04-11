@@ -1,4 +1,4 @@
-package com.dp.algorithm.design;
+package com.dp.algorithm.linkedlist;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -24,16 +24,14 @@ public class LRUCache {
     private int capacity;
 
     // dummy head
-    private Node head;
+    private Node head = new Node();
 
     // dummy tail
-    private Node tail;
+    private Node tail = new Node();
 
     public LRUCache(int capacity) {
         this.size = 0;
         this.capacity = capacity;
-        this.head = new Node();
-        this.tail = new Node();
         head.next = tail;
         tail.prev = head;
     }

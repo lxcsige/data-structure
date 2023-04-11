@@ -20,15 +20,12 @@ public class InsertSort {
     private int[] sort(int[] arr) {
         for (int i = 1; i < arr.length; i++) {
             int tmp = arr[i];
-            int j = i;
-            while (j > 0 && tmp < arr[j - 1]) {
-                arr[j] = arr[j - 1];
+            int j = i - 1;
+            while (j >= 0 && arr[j] > tmp) {
+                arr[j + 1] = arr[j];
                 j--;
             }
-            // 存在比其小的数，插入
-            if (j != i) {
-                arr[j] = tmp;
-            }
+            arr[j + 1] = tmp;
         }
         return arr;
     }

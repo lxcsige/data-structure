@@ -1,4 +1,6 @@
-package com.dp.algorithm.linkedlist;
+package com.dp.algorithm.linkedlist.cycle;
+
+import com.dp.algorithm.linkedlist.ListNode;
 
 /**
  * leetcode_142_环形链表II_中等

@@ -109,12 +109,6 @@ public class CombinationSum {
 
     private void combinationSum3(int[] candidates, int target, int index,
                                  List<Integer> combination, List<List<Integer>> res) {
-        if (target < 0) {
-            return;
-        }
-        if (index >= candidates.length) {
-            return;
-        }
         if(target == 0) {
             res.add(new ArrayList<>(combination));
             return;

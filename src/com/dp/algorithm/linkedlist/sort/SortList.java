@@ -1,4 +1,6 @@
-package com.dp.algorithm.linkedlist;
+package com.dp.algorithm.linkedlist.sort;
+
+import com.dp.algorithm.linkedlist.ListNode;
 
 /**
  * leetcode_148_排序链表_中等
@@ -65,51 +67,74 @@ public class SortList {
     }
 
     public ListNode sortList2(ListNode head) {
+        // 边界
         if (head == null || head.next == null) {
             return head;
         }
-
-        // 获取链表长度
-        int length = 0;
-        ListNode p = head;
-        while (p != null) {
-            p = p.next;
-            length++;
+        // 链表长度
+        int len = 0;
+        ListNode dummy = new ListNode(-1, head), cur = head, prev;
+        while (cur != null) {
+            cur = cur.next;
+            len++;
         }
-
-        ListNode dummy = new ListNode(-1, head);
-        for (int subLength = 1; subLength < length; subLength <<= 1) {
-            ListNode prev = dummy, cur = dummy.next;
+        // 自底向上迭代，两两合并
+        for (int subLen = 1; subLen < len; subLen = subLen * 2) {
+            // 重置指针
+            prev = dummy;
+            // 注意，这里不能重置为head，经过一轮排序之后head可能已经不是首节点了
+            cur = dummy.next;
             while (cur != null) {
-                // 两两合并
-                // 第一个分组的头节点
-                ListNode head1 = cur;
-                for (int i = 1; i < subLength && cur.next != null; i++) {
+                // 第一个子链表的head
+                ListNode l1 = cur;
+                // 遍历到第一个子链表的最后一个节点
+                // 注意边界，最后一个子链表可能不足subLen个节点
+                for (int i = 1; i < subLen && cur.next != null; i++) {
                     cur = cur.next;
                 }
-                ListNode head2 = cur.next;
-                // 断开分组之间的连接
+                // 第二个子链表的head，可能为null
+                ListNode l2 = cur.next;
+                // 断开2个子链表之间的连接
                 cur.next = null;
-                // 此时cur可能为null
-                cur = head2;
-                for (int i = 1; i < subLength && cur != null && cur.next != null; i++) {
+                cur = l2;
+                // cur可能为null，因此要多加一步判断
+                for (int i = 1; i < subLen && cur != null && cur.next != null; i++) {
                     cur = cur.next;
                 }
-                // 保存下一个分组的头节点
+                // 下一个分组的head
                 ListNode next = null;
+                // 如果第二个子链表不为空
                 if (cur != null) {
                     next = cur.next;
+                    // 断开与后继节点的连接
                     cur.next = null;
                 }
                 cur = next;
-                // 两两合并
-                ListNode newHead = mergeLists(head1, head2);
-                prev.next = newHead;
+                // 合并两个子链表并恢复连接
+                prev.next = mergeTwoLists(l1, l2);
+                // 找到下一组子链表的prev节点
                 while (prev.next != null) {
                     prev = prev.next;
                 }
             }
         }
+        return dummy.next;
+    }
+
+    private ListNode mergeTwoLists(ListNode l1, ListNode l2) {
+        ListNode dummy = new ListNode(-1);
+        ListNode cur = dummy;
+        while (l1 != null && l2 != null) {
+            if (l1.val <= l2.val) {
+                cur.next = l1;
+                l1 = l1.next;
+            } else {
+                cur.next = l2;
+                l2 = l2.next;
+            }
+            cur = cur.next;
+        }
+        cur.next = l1 == null ? l2 : l1;
         return dummy.next;
     }
 }

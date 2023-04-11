@@ -1,7 +1,7 @@
 package com.dp.algorithm.linkedlist;
 
 /**
- * 删除链表元素
+ * leetcode_203_删除链表元素_简单
  *
  * @author xucheng.liu
  * @date 2021/3/1

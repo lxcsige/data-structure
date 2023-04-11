@@ -1,4 +1,6 @@
-package com.dp.algorithm.linkedlist;
+package com.dp.algorithm.linkedlist.sort;
+
+import com.dp.algorithm.linkedlist.ListNode;
 
 /**
  * leetcode_147_对链表进行插入排序_中等
