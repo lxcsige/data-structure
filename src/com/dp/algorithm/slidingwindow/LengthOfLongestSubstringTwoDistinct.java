@@ -13,10 +13,11 @@ import java.util.Map;
 public class LengthOfLongestSubstringTwoDistinct {
 
     public static void main(String[] args) {
-        System.out.println(lengthOfLongestSubstringTwoDistinct2("abac"));
+        LengthOfLongestSubstringTwoDistinct solution = new LengthOfLongestSubstringTwoDistinct();
+        System.out.println(solution.lengthOfLongestSubstringTwoDistinct2("ccaabbb"));
     }
 
-    public static int lengthOfLongestSubstringTwoDistinct(String s) {
+    public int lengthOfLongestSubstringTwoDistinct(String s) {
         if (s == null || s.length() == 0) {
             return 0;
         }
@@ -40,21 +41,22 @@ public class LengthOfLongestSubstringTwoDistinct {
         return res;
     }
 
-    public static int lengthOfLongestSubstringTwoDistinct2(String s) {
-        final int sLen = s.length();
-        final int[] count = new int[256];
-        int right = 0, left = 0;
-        // left和right在同一个循环中，因此窗口大小单调递增，因此不需要每次都进行Math.max()比较
-        for (int types = 0; right < sLen; right++) {
-            if (count[s.charAt(right)]++ == 0) {
-                ++types;
-            }
-            if (types > 2) {
-                if (--count[s.charAt(left++)] == 0) {
-                    --types;
+    public int lengthOfLongestSubstringTwoDistinct2(String s) {
+        Map<Character, Integer> countMap = new HashMap<>();
+        int left = 0, right = 0, res = 0;
+        for (; right < s.length(); right++) {
+            char ch = s.charAt(right);
+            countMap.put(ch, countMap.getOrDefault(ch, 0) + 1);
+            while (countMap.size() > 2) {
+                int count = countMap.get(s.charAt(left++));
+                if (count == 1) {
+                    countMap.remove(ch);
+                } else {
+                    countMap.put(ch, count - 1);
                 }
             }
+            res = Math.max(res, right - left + 1);
         }
-        return right - left;
+        return res;
     }
 }

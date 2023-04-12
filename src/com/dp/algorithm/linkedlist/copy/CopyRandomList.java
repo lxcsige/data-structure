@@ -1,10 +1,10 @@
-package com.dp.algorithm.linkedlist;
+package com.dp.algorithm.linkedlist.copy;
 
 import java.util.HashMap;
 import java.util.Map;
 
 /**
- * 复制随机指针链表
+ * leetcode_138_复制带随机指针的链表_中等
  *
  * @author xucheng.liu
  * @date 2021/3/5
@@ -54,8 +54,8 @@ public class CopyRandomList {
         // 设置next和random
         cur = head;
         while (cur != null) {
-            map.get(cur).next=map.get(cur.next);
-            map.get(cur).random=map.get(cur.random);
+            map.get(cur).next = map.get(cur.next);
+            map.get(cur).random = map.get(cur.random);
             cur = cur.next;
         }
 

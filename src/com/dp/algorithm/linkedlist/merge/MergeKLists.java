@@ -1,4 +1,6 @@
-package com.dp.algorithm.linkedlist;
+package com.dp.algorithm.linkedlist.merge;
+
+import com.dp.algorithm.linkedlist.ListNode;
 
 /**
  * leetcode_23_合并k个升序链表_困难
@@ -38,9 +40,6 @@ public class MergeKLists {
     private ListNode mergeKLists(ListNode[] lists, int left, int right) {
         if (left == right) {
             return lists[left];
-        }
-        if (left > right) {
-            return null;
         }
         int mid = (left + right) >> 1;
         return merge(mergeKLists(lists, left, mid), mergeKLists(lists, mid + 1, right));

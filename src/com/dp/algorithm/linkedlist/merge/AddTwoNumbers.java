@@ -1,6 +1,10 @@
-package com.dp.algorithm.linkedlist;
+package com.dp.algorithm.linkedlist.merge;
+
+import com.dp.algorithm.linkedlist.ListNode;
 
 /**
+ * leetcode_2_两数相加_中等
+ *
  * @author xucheng.liu
  * @date 2021/3/4
  */
@@ -27,9 +31,9 @@ public class AddTwoNumbers {
             if (l2 != null) {
                 l2 = l2.next;
             }
-            if (carry > 0) {
-                cur.next = new ListNode(carry);
-            }
+        }
+        if (carry > 0) {
+            cur.next = new ListNode(carry);
         }
         return dummyHead.next;
     }

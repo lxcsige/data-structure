@@ -1,7 +1,7 @@
 package com.dp.algorithm.linkedlist;
 
 /**
- * 删除倒数第K个元素
+ * leetcode_19_删除链表的倒数第N个节点_中等
  *
  * @author xucheng.liu
  * @date 2021/3/1

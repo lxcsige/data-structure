@@ -1,4 +1,6 @@
-package com.dp.algorithm.linkedlist;
+package com.dp.algorithm.linkedlist.reverse;
+
+import com.dp.algorithm.linkedlist.ListNode;
 
 /**
  * @author liuxucheng

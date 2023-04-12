@@ -1,6 +1,10 @@
-package com.dp.algorithm.linkedlist;
+package com.dp.algorithm.linkedlist.cycle;
+
+import com.dp.algorithm.linkedlist.ListNode;
 
 /**
+ * leetcode_61_旋转链表_中等
+ *
  * @author liuxucheng
  * @since 2021/3/6
  */

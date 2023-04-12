@@ -31,30 +31,47 @@ public class Flatten {
     }
 
     public Node flatten(Node head) {
-        if (head == null) {
-            return null;
-        }
-        Node dummyHead = new Node(-1, null, head, null);
-        dfsRecursively(dummyHead, head);
-        dummyHead.next.prev = null;
-        return dummyHead.next;
+        dfs(head);
+        return head;
     }
 
-    private Node dfsRecursively(Node prev, Node cur) {
-        if (cur == null) {
-            return prev;
+    /**
+     * 深度优先遍历，返回尾节点
+     *
+     * @param head
+     * @return
+     */
+    private Node dfs(Node head) {
+        Node tail = head, cur = head, next, childTail;
+        while (cur != null) {
+            next = cur.next;
+            // 没有child节点，继续向后遍历即可
+            if (cur.child == null) {
+                tail = cur;
+            } else {
+                // 有child节点，递归遍历
+                childTail = dfs(cur.child);
+                cur.next = cur.child;
+                cur.child.prev = cur;
+                cur.child = null;
+                // next可能为空
+                if (next != null) {
+                    childTail.next = next;
+                    next.prev = childTail;
+                }
+                tail = childTail;
+            }
+            cur = next;
         }
-        cur.prev = prev;
-        prev.next = cur;
-
-        // cur.next在后面的递归中会变化
-        Node temp = cur.next;
-        Node tail = dfsRecursively(cur, cur.child);
-        cur.child = null;
-
-        return dfsRecursively(tail, temp);
+        return tail;
     }
 
+    /**
+     * 迭代
+     *
+     * @param head
+     * @return
+     */
     public Node flatten2(Node head) {
         if (head == null) {
             return null;

@@ -1,7 +1,9 @@
-package com.dp.algorithm.linkedlist;
+package com.dp.algorithm.linkedlist.merge;
+
+import com.dp.algorithm.linkedlist.ListNode;
 
 /**
- * 合并两个有序链表，同归并排序
+ * leetcode_21_合并两个有序链表_简单
  *
  * @author xucheng.liu
  * @date 2021/3/4

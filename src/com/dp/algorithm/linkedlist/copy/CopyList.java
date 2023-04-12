@@ -1,4 +1,6 @@
-package com.dp.algorithm.linkedlist;
+package com.dp.algorithm.linkedlist.copy;
+
+import com.dp.algorithm.linkedlist.ListNode;
 
 import java.util.HashMap;
 

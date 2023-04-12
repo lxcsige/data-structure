@@ -1,4 +1,6 @@
-package com.dp.algorithm.linkedlist;
+package com.dp.algorithm.linkedlist.sort;
+
+import com.dp.algorithm.linkedlist.ListNode;
 
 /**
  * leetcode_143_重排链表_中等
