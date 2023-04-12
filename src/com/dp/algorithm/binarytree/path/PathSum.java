@@ -3,8 +3,6 @@ package com.dp.algorithm.binarytree.path;
 import com.dp.algorithm.binarytree.TreeNode;
 
 import java.util.ArrayList;
-import java.util.Deque;
-import java.util.LinkedList;
 import java.util.List;
 
 /**
