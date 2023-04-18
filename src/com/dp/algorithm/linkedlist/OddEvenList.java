@@ -3,6 +3,8 @@ package com.dp.algorithm.linkedlist;
 /**
  * leetcode_328_奇偶链表_中等
  *
+ * reviewed at 2023.04.14
+ *
  * @author liuxucheng
  * @since 2023/2/7
  */

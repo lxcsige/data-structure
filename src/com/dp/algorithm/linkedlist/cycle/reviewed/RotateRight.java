@@ -1,4 +1,4 @@
-package com.dp.algorithm.linkedlist.cycle;
+package com.dp.algorithm.linkedlist.cycle.reviewed;
 
 import com.dp.algorithm.linkedlist.ListNode;
 

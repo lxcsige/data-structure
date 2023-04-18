@@ -1,110 +1,107 @@
 package com.dp.algorithm.linkedlist;
 
 /**
+ * leetcode_707_设计链表_中等
+ *
+ * reviewed at 2023.04.14
+ *
  * @author xucheng.liu
  * @date 2021/2/28
  */
-public class MyLinkedList<E> {
+public class MyLinkedList {
 
-    private Node<E> head;
+    /**
+     * dummy头节点
+     */
+    private final ListNode head;
+
+    /**
+     * 元素数量
+     */
+    private int size;
 
     public MyLinkedList() {
-
+        head = new ListNode(-1);
     }
 
-    public MyLinkedList(Node head) {
-        this.head = head;
-    }
-
-    public E get(int index) {
-        if (head == null) {
-            return null;
+    public int get(int index) {
+        if (index < 0 || index >= size) {
+            return -1;
         }
-        Node<E> p = head;
-        for (int i = 0; i < index; i++) {
+        ListNode p = head;
+        for (int i = 0; i <= index; i++) {
             p = p.next;
             if (p == null) {
-                return null;
+                return -1;
             }
         }
         return p.val;
     }
 
-    public void addAtHead(E val) {
-        head = new Node<>(val, head);
+    public void addAtHead(int val) {
+        ListNode newNode = new ListNode(val);
+        newNode.next = head.next;
+        head.next = newNode;
+        size++;
     }
 
-    public void addAtTail(E val) {
-        if (head == null) {
-            head = new Node<>(val, null);
-            return;
-        }
-        Node<E> p = head;
+    public void addAtTail(int val) {
+        ListNode p = head;
         while (p.next != null) {
             p = p.next;
         }
-        p.next = new Node<>(val, null);
+        ListNode newNode = new ListNode(val);
+        p.next = newNode;
+        size++;
     }
 
-    public void addAtIndex(int index, E val) {
-        if (index < 0) {
+    public void addAtIndex(int index, int val) {
+        // index == size时插入到尾节点后面
+        if (index > size || index < 0) {
             return;
         }
-        Node<E> dummy = new Node<>(null, head);
-        Node<E> p = dummy;
+        // 前驱节点
+        ListNode p = head;
         for (int i = 0; i < index; i++) {
             p = p.next;
-            if (p == null) {
-                return;
-            }
         }
-        p.next = new Node<>(val, p.next);
-        head = dummy.next;
+        ListNode newNode = new ListNode(val);
+        newNode.next = p.next;
+        p.next = newNode;
+        size++;
     }
 
     public void deleteAtIndex(int index) {
-        if (index < 0) {
+        // index必须小于size
+        if (index >= size || index < 0) {
             return;
         }
-        Node<E> dummy = new Node<>(null, head);
-        Node<E> p = dummy;
+        // 前驱节点
+        ListNode p = head;
         for (int i = 0; i < index; i++) {
             p = p.next;
-            if (p == null) {
-                return;
-            }
-        }
-        if (p.next == null) {
-            return;
         }
         p.next = p.next.next;
-        head = dummy.next;
+        size--;
     }
 
-    /**
-     * 环形链表
-     *
-     * @return
-     */
-    public Node hasCycle() {
-        if (head == null || head.next == null) {
-            return null;
+    private static class ListNode {
+
+        private int val;
+
+        private ListNode next;
+
+        public ListNode() {
+
         }
 
-        Node slow = head;
-        Node fast = head;
-        while (fast.next != null && fast.next.next != null) {
-            slow = slow.next;
-            fast = fast.next.next;
-            if (slow == fast) {
-                fast = head;
-                while (fast != slow) {
-                    fast = fast.next;
-                    slow = slow.next;
-                }
-                return slow;
-            }
+        public ListNode(int val) {
+            this.val = val;
         }
-        return null;
+
+        public ListNode(int val, ListNode next) {
+            this.val = val;
+            this.next = next;
+        }
     }
 }

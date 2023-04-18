@@ -1,4 +1,4 @@
-package com.dp.algorithm.linkedlist.sort;
+package com.dp.algorithm.linkedlist.sort.reviewed;
 
 import com.dp.algorithm.linkedlist.ListNode;
 

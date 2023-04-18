@@ -1,7 +1,7 @@
 package com.dp.algorithm.sort;
 
 /**
- * 归并排序
+ * 归并排序（重点）
  *
  * @author liuxucheng
  * @since 2022/8/12
@@ -20,8 +20,12 @@ public class MergeSort {
     }
 
     /**
-     * 时间复杂度O(nlogn)，T(n) = 2*T(n/2) + O(n)
+     * 思路：
+     * 1. 借助额外空间，合并两个有序数组，得到更长的有序数组
+     * 2. 递归分治
+     * 时间复杂度O(nlogn)
      * 空间复杂度O(n)
+     * 优点：稳定
      *
      * @param nums
      * @param left
@@ -37,6 +41,10 @@ public class MergeSort {
         // 递归调用，分别对2个子数组进行排序
         mergeSort(nums, left, mid, res);
         mergeSort(nums, mid + 1, right, res);
+        // 剪枝，左右两个子区间本来就有序，不需要归并
+        if (nums[mid] <= nums[mid + 1]) {
+            return;
+        }
         // 归并2个有序子数组
         int i = left, j = mid + 1, k = 0;
         while (i <= mid && j <= right) {

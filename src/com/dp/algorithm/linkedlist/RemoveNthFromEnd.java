@@ -3,6 +3,8 @@ package com.dp.algorithm.linkedlist;
 /**
  * leetcode_19_删除链表的倒数第N个节点_中等
  *
+ * reviewed at 2023.04.14
+ *
  * @author xucheng.liu
  * @date 2021/3/1
  */

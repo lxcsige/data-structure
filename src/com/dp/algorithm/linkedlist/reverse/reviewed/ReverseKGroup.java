@@ -1,8 +1,10 @@
-package com.dp.algorithm.linkedlist.reverse;
+package com.dp.algorithm.linkedlist.reverse.reviewed;
 
 import com.dp.algorithm.linkedlist.ListNode;
 
 /**
+ * leetcode_25_k个一组反转链表_困难
+ *
  * @author liuxucheng
  * @since 2021/3/9
  */

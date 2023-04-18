@@ -3,6 +3,8 @@ package com.dp.algorithm.linkedlist;
 /**
  * leetcode_82_删除排序链表中的重复元素II_中等
  *
+ * reviewed at 2023.04.14
+ *
  * @author xucheng.liu
  * @since 2022/5/6
  */
