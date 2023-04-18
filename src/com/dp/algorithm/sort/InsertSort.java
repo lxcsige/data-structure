@@ -3,6 +3,8 @@ package com.dp.algorithm.sort;
 /**
  * 直接插入排序
  *
+ * 将元素插入到前面的有序部分
+ *
  * @author xucheng.liu
  * @since 2022/5/11
  */
@@ -12,11 +14,6 @@ public class InsertSort {
 
     }
 
-    /**
-     * 从index=1开始遍历，将元素插入到前面的有序部分
-     *
-     * @param arr
-     */
     private int[] sort(int[] arr) {
         for (int i = 1; i < arr.length; i++) {
             int tmp = arr[i];

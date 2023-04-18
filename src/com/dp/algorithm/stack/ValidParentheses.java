@@ -1,4 +1,4 @@
-package com.dp.algorithm;
+package com.dp.algorithm.stack;
 
 import java.util.*;
 
@@ -8,11 +8,11 @@ import java.util.*;
  * @author liuxucheng
  * @since 2022/12/9
  */
-public class IsValid {
+public class ValidParentheses {
 
     public static void main(String[] args) {
-        IsValid test = new IsValid();
-        test.isValid("()");
+        ValidParentheses test = new ValidParentheses();
+        System.out.println(test.isValid("()"));
     }
 
     public boolean isValid(String s) {
@@ -24,13 +24,14 @@ public class IsValid {
         pairs.put(')', '(');
         pairs.put(']', '[');
         pairs.put('}', '{');
-        Deque<Character> stack = new LinkedList<>();
+        Deque<Character> stack = new ArrayDeque<>();
         for (int i = 0; i < s.length(); i++) {
             char ch = s.charAt(i);
             if (pairs.containsKey(ch)) {
                 if (stack.isEmpty() || !stack.peek().equals(pairs.get(ch))) {
                     return false;
                 }
+                stack.pop();
             } else {
                 stack.push(ch);
             }
