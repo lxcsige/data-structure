@@ -3,14 +3,12 @@ package com.dp.algorithm.linkedlist;
 /**
  * leetcode_160_相交链表_简单
  *
+ * reviewed at 2023.04.14
+ *
  * @author xucheng.liu
  * @date 2021/3/1
  */
 public class IntersectionNode {
-
-    public static void main(String[] args) {
-
-    }
 
     /**
      * 双指针，殊途同归
@@ -19,7 +17,7 @@ public class IntersectionNode {
      * @param headB
      * @return
      */
-    public static ListNode getIntersectionNode(ListNode headA, ListNode headB) {
+    public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
         ListNode p = headA;
         ListNode q = headB;
         while (p != q) {

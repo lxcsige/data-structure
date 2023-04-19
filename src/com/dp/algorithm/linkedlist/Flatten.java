@@ -3,7 +3,9 @@ package com.dp.algorithm.linkedlist;
 import java.util.Stack;
 
 /**
- *  双向链表 + 先根遍历
+ * leetcode_430_扁平化多级双向链表_中等
+ *
+ * reviewed at 2023.04.14
  *
  * @author xucheng.liu
  * @date 2021/3/5

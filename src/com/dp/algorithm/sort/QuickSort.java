@@ -25,6 +25,8 @@ public class QuickSort {
      * 2. 递归：通过递归调用，分别对2个子数组进行排序；
      * 3. 合并：因为子数组都是原址排序的，所以不需要进行合并操作。
      *
+     * 与「归并排序」不同，「快速排序」在「分」这件事情上不想「归并排序」无脑地一分为二，而是采用了 partition 的方法，因此就没有「合」的过程。
+     *
      * 平均时间复杂度O(nlogn)，平均空间复杂度O(logn)
      * 在基本有序的情况下，最坏时间复杂度O(n^2)，最坏空间复杂度O(n)，退化为冒泡排序
      *
@@ -55,7 +57,7 @@ public class QuickSort {
         // 随机选取基准值
         int pivotIndex = random.nextInt(end - start + 1) + start;
         swap(nums, start, pivotIndex);
-        return partition3(nums, start, end);
+        return partition1(nums, start, end);
     }
 
     private void swap(int[] nums, int index1, int index2) {
@@ -77,7 +79,7 @@ public class QuickSort {
         int left = start, right = end;
         while (left < right) {
             // 向左遍历直到第一个不大于基准的元素
-            // 注意：如果选择左边界作为基准值，则必须先向右遍历，否则left==right时，无法保证nums[left]不大于pivot
+            // 注意：如果选择左边界作为基准值，则必须先从右开始遍历，否则left==right时，无法保证nums[left]不大于pivot
             while (left < right && nums[right] > pivot) {
                 right--;
             }
@@ -85,11 +87,12 @@ public class QuickSort {
             while (left < right && nums[left] <= pivot) {
                 left++;
             }
-            // 交换两个元素，大于基准值的元素交换到右边，小于基准值的元素交换到左边
+            // 交换两个元素，大于基准值的元素交换到右边，不大于基准值的元素交换到左边
             if (left < right) {
                 swap(nums, left, right);
             }
         }
+        // 将pivot交换到中间
         swap(nums, start, left);
         return left;
     }
@@ -111,6 +114,7 @@ public class QuickSort {
                 right--;
             }
             // 将该元素填到左边，原来的位置则作为下一个要填的坑
+            // 虽然第一次填时会覆盖原有值，但可以通过pivot进行复原
             if (left < right) {
                 nums[left] = nums[right];
                 left++;
@@ -145,12 +149,16 @@ public class QuickSort {
             if (nums[i] <= pivot) {
                 // 右移边界
                 mark++;
-                // 交换nums[mark+1]和nums[i]
-                int temp = nums[mark];
-                nums[mark] = nums[i];
-                nums[i] = temp;
+                if (i > mark) {
+                    // 交换nums[mark]和nums[i]
+                    // 交换前的nums[mark] > pivot
+                    swap(nums, i, mark);
+                }
             }
         }
+        // 遍历结束后，mark指向不大于pivot的最后一个元素
+        // 将pivot交换到mark所指向的位置
+        // 交换后pivot前面的元素都不大于pivot，后面的元素都大于pivot
         nums[start] = nums[mark];
         nums[mark] = pivot;
         return mark;

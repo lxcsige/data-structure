@@ -1,4 +1,4 @@
-package com.dp.algorithm.linkedlist.cycle;
+package com.dp.algorithm.linkedlist.cycle.reviewed;
 
 import com.dp.algorithm.linkedlist.ListNode;
 
@@ -24,15 +24,15 @@ public class HasCycle {
         if (head == null || head.next == null) {
             return false;
         }
-
         ListNode slow = head, fast = head;
-        do {
-            if (fast == null || fast.next == null) {
-                return false;
-            }
+        while (fast != null && fast.next != null) {
             slow = slow.next;
             fast = fast.next.next;
-        } while (slow != fast);
-        return true;
+            // 相等则说明存在环，返回即可
+            if (slow == fast) {
+                return true;
+            }
+        }
+        return false;
     }
 }

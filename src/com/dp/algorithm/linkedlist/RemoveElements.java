@@ -3,6 +3,8 @@ package com.dp.algorithm.linkedlist;
 /**
  * leetcode_203_删除链表元素_简单
  *
+ * reviewed at 2023.04.14
+ *
  * @author xucheng.liu
  * @date 2021/3/1
  */
@@ -19,11 +21,10 @@ public class RemoveElements {
         while (cur != null) {
             if (cur.val == val) {
                 prev.next = cur.next;
-                cur = cur.next;
             } else {
                 prev = prev.next;
-                cur = cur.next;
             }
+            cur = cur.next;
         }
         return dummy.next;
     }

@@ -20,6 +20,7 @@ public class FindKthLargest {
     /**
      * 快速选择算法
      * 整体思路类似快排，每次划分可以确定一个元素的位置
+     * 时间复杂度：O(n)
      *
      * @param nums
      * @param k

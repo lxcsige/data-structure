@@ -1,4 +1,4 @@
-package com.dp.algorithm.linkedlist.merge;
+package com.dp.algorithm.linkedlist.merge.reviewed;
 
 import com.dp.algorithm.linkedlist.ListNode;
 

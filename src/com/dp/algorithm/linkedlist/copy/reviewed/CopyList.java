@@ -1,4 +1,4 @@
-package com.dp.algorithm.linkedlist.copy;
+package com.dp.algorithm.linkedlist.copy.reviewed;
 
 import com.dp.algorithm.linkedlist.ListNode;
 

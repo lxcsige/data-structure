@@ -1,4 +1,4 @@
-package com.dp.algorithm.linkedlist.reverse;
+package com.dp.algorithm.linkedlist.reverse.reviewed;
 
 import com.dp.algorithm.linkedlist.ListNode;
 

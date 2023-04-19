@@ -3,6 +3,8 @@ package com.dp.algorithm.linkedlist;
 /**
  * leetcode_83_删除排序链表中的重复元素_简单
  *
+ * reviewed at 2023.04.14
+ *
  * @author liuxucheng
  * @since 2023/2/7
  */

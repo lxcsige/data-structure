@@ -1,6 +1,8 @@
 package com.dp.algorithm.linkedlist;
 
 /**
+ * leetcode_234_回文链表_简单
+ *
  * @author liuxucheng
  * @since 2021/3/9
  */
@@ -88,10 +90,11 @@ public class IsPalindrome {
         if (!check(head.next)) {
             return false;
         }
-        // 走到这步，front节点已经不等于head了
         if (head.val != front.val) {
             return false;
         }
+        // 递归返回后front才会向后移动
+        // 对于最后一个节点，递归返回后，front等于第一个节点，然后继续向后移动
         front = front.next;
         return true;
     }
