@@ -5,6 +5,8 @@ import java.util.Iterator;
 import java.util.List;
 
 /**
+ * leetcode_341_扁平化嵌套列表迭代器_中等
+ *
  * @author liuxucheng
  * @since 2021/5/6
  */

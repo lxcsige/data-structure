@@ -6,6 +6,8 @@ import java.util.Queue;
 /**
  * leetcode_617_合并二叉树_简单
  *
+ * reviewed at 2023.04.20
+ *
  * @author xucheng.liu
  * @since 2022/5/12
  */
@@ -13,6 +15,8 @@ public class MergeTrees {
 
     /**
      * 递归，DFS
+     *
+     * 推荐
      *
      * @param root1
      * @param root2
@@ -37,6 +41,8 @@ public class MergeTrees {
      * 迭代，BFS
      * 将root2合并到root1中
      *
+     * 推荐
+     *
      * @param root1
      * @param root2
      * @return
@@ -54,15 +60,19 @@ public class MergeTrees {
         while (!queue.isEmpty()) {
             TreeNode t1 = queue.poll();
             TreeNode t2 = queue.poll();
-
+            // 将root2合并到root1
             t1.val += t2.val;
+            // 左子节点入队
             if (t1.left != null && t2.left != null) {
                 queue.offer(t1.left);
                 queue.offer(t2.left);
-            } else if (t1.left == null) {
-                // 如果t1的左子树为空，直接将t2的左子树挂到t1的左子树位置
+            }
+            // t1的左子树为空，直接将t2的左子树挂到t1的左子树位置
+            // t2的左子树为空，则不需要作任何处理
+            else if (t1.left == null) {
                 t1.left = t2.left;
             }
+            // 右子节点入队
             if(t1.right != null && t2.right != null) {
                 queue.offer(t1.right);
                 queue.offer(t2.right);

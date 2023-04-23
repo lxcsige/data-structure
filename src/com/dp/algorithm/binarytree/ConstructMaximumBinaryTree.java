@@ -1,6 +1,13 @@
 package com.dp.algorithm.binarytree;
 
+import java.util.ArrayDeque;
+import java.util.Deque;
+
 /**
+ * leetcode_654_最大二叉树_中等
+ *
+ * reviewed at 2023.04.20
+ *
  * @author xucheng.liu
  * @date 2021/3/24
  */
@@ -11,7 +18,7 @@ public class ConstructMaximumBinaryTree {
     }
 
     /**
-     * 654.最大二叉树
+     * 前序DFS
      *
      * @param nums
      * @return
@@ -42,5 +49,26 @@ public class ConstructMaximumBinaryTree {
             }
         }
         return res;
+    }
+
+    /**
+     * 单调栈
+     *
+     * @param nums
+     * @return
+     */
+    public TreeNode constructMaximumBinaryTree2(int[] nums) {
+        Deque<TreeNode> stack = new ArrayDeque<>();
+        for (int num : nums) {
+            TreeNode cur = new TreeNode(num);
+            while (!stack.isEmpty() && stack.peek().val < cur.val) {
+                cur.right = stack.pop();
+            }
+            if (!stack.isEmpty()) {
+                stack.peek().left = cur;
+            }
+            stack.push(cur);
+        }
+        return stack.peekLast();
     }
 }
