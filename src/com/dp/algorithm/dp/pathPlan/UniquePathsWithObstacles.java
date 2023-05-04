@@ -1,16 +1,13 @@
 package com.dp.algorithm.dp.pathPlan;
 
 /**
- * 63_不同路径2
+ * leetcode_63_不同路径II_中等
+ * reviewed at 2023.05.03
  *
  * @author xucheng.liu
  * @since 2022/2/24
  */
 public class UniquePathsWithObstacles {
-
-    public static void main(String[] args) {
-
-    }
 
     /**
      * 二维数组

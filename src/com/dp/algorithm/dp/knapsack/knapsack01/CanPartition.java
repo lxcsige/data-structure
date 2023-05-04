@@ -47,7 +47,6 @@ public class CanPartition {
         if (nums[0] <= target) {
             dp[0][nums[0]] = true;
         }
-
         for (int i = 1; i < nums.length; i++) {
             for (int j = 1; j <= target; j++) {
                 if (j < nums[i]) {
@@ -55,7 +54,6 @@ public class CanPartition {
                 } else {
                     dp[i][j] = dp[i-1][j] || dp[i-1][j-nums[i]];
                 }
-
                 // 剪枝
                 if (dp[i][target]) {
                     return true;
