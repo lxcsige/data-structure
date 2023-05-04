@@ -1,8 +1,11 @@
 package com.dp.algorithm.binarytree;
 
+import java.util.Arrays;
 import java.util.LinkedList;
 
 /**
+ * leetcode_297_二叉树的序列化和反序列化_困难
+ *
  * @author liuxucheng
  * @since 2021/4/19
  */
@@ -23,6 +26,12 @@ public class Serialize {
         TreeNode root1 = main.deserialize(str);
     }
 
+    /**
+     * 先序DFS
+     *
+     * @param root
+     * @return
+     */
     public String serialize(TreeNode root) {
         if (root == null) {
             return null;
@@ -49,11 +58,8 @@ public class Serialize {
             return null;
         }
 
-        LinkedList<String> nodes = new LinkedList<>();
         String[] nodeArr = data.split(SEP);
-        for (String node : nodeArr) {
-            nodes.add(node);
-        }
+        LinkedList<String> nodes = new LinkedList<>(Arrays.asList(nodeArr));
 
         return deserialize(nodes);
     }

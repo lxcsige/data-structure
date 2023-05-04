@@ -3,6 +3,8 @@ package com.dp.algorithm.binarytree;
 /**
  * leetcode_671_二叉树中第二小的节点_简单
  *
+ * reviewed at 2023.04.21
+ *
  * @author xucheng.liu
  * @since 2022/5/25
  */

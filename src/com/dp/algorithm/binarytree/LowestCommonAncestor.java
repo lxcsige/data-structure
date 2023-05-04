@@ -1,7 +1,7 @@
 package com.dp.algorithm.binarytree;
 
 /**
- *
+ * leetcode_236_二叉树的最近公共祖先_中等
  *
  * @author liuxucheng
  * @since 2021/5/6
@@ -52,6 +52,7 @@ public class LowestCommonAncestor {
 
     /**
      * 后序遍历
+     *
      * f(root)表示包含p或q节点，那么f(root) = f(root.left) || f(root) || root == p || root == q
      * 如果root是最近公共祖先节点，那么(f(root.left) && f(root.right)) || ((root == p || root == q) && (f(root.left) || f(root.right)))
      *
@@ -72,9 +73,32 @@ public class LowestCommonAncestor {
         }
         boolean left = contains(root.left, p, q);
         boolean right = contains(root.right, p, q);
+        // 情况1. left && right：p和q分别存在于左右子树中，root就是p和q的公共祖先节点
+        // 情况2. (root == p || root == q) && (left || right)：p是q的祖先节点（或q是p的祖先节点）
         if ((left && right) || ((root == p || root == q) && (left || right))) {
             res = root;
         }
         return left || right || root == p || root == q;
+    }
+
+    /**
+     * 后序遍历
+     * 含义：如果同时包含p和q，返回其最小公共祖先节点，否则返回p或q或null
+     *
+     * @param root
+     * @param p
+     * @param q
+     * @return
+     */
+    public TreeNode lowestCommonAncestor3(TreeNode root, TreeNode p, TreeNode q) {
+        if (root == null || root == p || root == q) {
+            return root;
+        }
+        TreeNode left = lowestCommonAncestor3(root.left, p, q);
+        TreeNode right = lowestCommonAncestor3(root.right, p, q);
+        if (left != null && right != null) {
+            return root;
+        }
+        return left == null ? right : left;
     }
 }

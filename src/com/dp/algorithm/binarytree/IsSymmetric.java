@@ -6,13 +6,15 @@ import java.util.Queue;
 /**
  * leetcode_101_对称二叉树_简单
  *
+ * reviewed at 2023.04.20
+ *
  * @author xucheng.liu
  * @since 2022/5/12
  */
 public class IsSymmetric {
 
     /**
-     * 递归
+     * 后序DFS
      *
      * @param root
      * @return
@@ -25,20 +27,26 @@ public class IsSymmetric {
     }
 
     private boolean dfs(TreeNode left, TreeNode right) {
+        // 1. 左右节点均为空
         if (left == null && right == null) {
             return true;
         }
+        // 2. 左或右节点为空
         if (left == null || right == null) {
             return false;
         }
+        // 3. 左右节点都不为空
+        // 3.1 左右节点值不同
         if (left.val != right.val) {
             return false;
         }
+        // 3.2 比较左节点的左子节点和右节点的右子节点（外侧）
+        // 3.3 比较左节点的右子节点和右节点的左子节点（内侧）
         return dfs(left.right, right.left) && dfs(left.left, right.right);
     }
 
     /**
-     * 迭代
+     * 迭代，BFS
      *
      * @param root
      * @return
@@ -49,6 +57,7 @@ public class IsSymmetric {
         }
 
         Queue<TreeNode> queue = new LinkedList<>();
+        // 队列中可能包含null
         queue.offer(root.left);
         queue.offer(root.right);
         while (!queue.isEmpty()) {
