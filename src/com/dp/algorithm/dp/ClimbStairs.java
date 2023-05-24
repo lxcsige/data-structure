@@ -1,7 +1,7 @@
 package com.dp.algorithm.dp;
 
 /**
- * leetcode_70_爬楼梯，斐波那契数列_简单
+ * leetcode_70_爬楼梯_简单
  *
  * reviewed at 2023.05.03
  *
@@ -23,33 +23,35 @@ public class ClimbStairs {
      * @return
      */
     public int climbStairs(int n) {
-        int[] dp = new int[n+1];
-        dp[0] = 1;
-        for (int i = 1; i <= n; i++) {
-            if (i >= 1) {
-                dp[i] += dp[i-1];
-            }
-            if (i >= 2) {
-                dp[i] += dp[i-2];
-            }
+        if (n <= 2) {
+            return n;
+        }
+        int[] dp = new int[n + 1];
+        // 初始状态
+        dp[1] = 1;
+        dp[2] = 2;
+        for (int i = 3; i <= n; i++) {
+            dp[i] = dp[i - 1] + dp[i - 2];
         }
         return dp[n];
     }
 
     /**
      * 压缩状态
-     * 注意n=1的情况
      *
      * @param n
      * @return
      */
     public int climbStairs2(int n) {
-        int p = 1, q = 1, r;
-        for (int i = 2; i <= n; i++) {
-            r = p + q;
-            p = q;
-            q = r;
+        if (n <= 2) {
+            return n;
         }
-        return q;
+        int prevPrev = 1, prev = 2, cur = 0;
+        for (int i = 3; i <= n; i++) {
+            cur = prevPrev + prev;
+            prevPrev = prev;
+            prev = cur;
+        }
+        return cur;
     }
 }

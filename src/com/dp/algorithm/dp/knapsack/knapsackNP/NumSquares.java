@@ -1,7 +1,7 @@
 package com.dp.algorithm.dp.knapsack.knapsackNP;
 
 /**
- * 279_完全平方数，即零钱兑换1
+ * leetcode_279_完全平方数_中等
  *
  * @author xucheng.liu
  * @since 2022/2/14

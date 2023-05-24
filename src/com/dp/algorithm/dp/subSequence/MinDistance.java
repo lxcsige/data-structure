@@ -1,7 +1,9 @@
 package com.dp.algorithm.dp.subSequence;
 
 /**
- * 583_两个字符串的删除操作
+ * leetcode_583_两个字符串的删除操作_中等
+ *
+ * reviewed at 2023.05.05
  *
  * @author liuxucheng
  * @since 2021/5/21

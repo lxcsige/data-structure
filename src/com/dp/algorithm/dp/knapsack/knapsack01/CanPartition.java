@@ -34,25 +34,19 @@ public class CanPartition {
         }
 
         int target = sum / 2;
-        // dp[i][j]表示nums[0...i]中是否存在和为j的子集
-        // 状态转移方程：dp[i][j] = dp[i-1][j] || dp[i-1][j-nums[i]]
+        int n = nums.length;
+        // dp[i][j]表示前i个数中是否存在和为j的子集
+        // 状态转移方程：dp[i][j] = dp[i-1][j] || dp[i-1][j-nums[i-1]]
         // 如果dp[i-1][j]为true，则dp[i][j]一定为true，在二维数组上的表现就是一列元素都是true
-        // 对于这种返回boolean的问题，没必要将dp数组的行数设为nums.length+1
-        boolean[][] dp = new boolean[nums.length][target + 1];
+        boolean[][] dp = new boolean[n + 1][target + 1];
         // 边界
-        for (int i = 0; i < nums.length; i++) {
-            // 其实就是j = nums[i]这种特殊情况，即nums[i]刚好可以放到容积为j的背包中，从背包问题的角度来看是符合题意的
-            dp[i][0] = true;
-        }
-        if (nums[0] <= target) {
-            dp[0][nums[0]] = true;
-        }
-        for (int i = 1; i < nums.length; i++) {
+        dp[0][0] = true;
+        for (int i = 1; i <= n; i++) {
             for (int j = 1; j <= target; j++) {
-                if (j < nums[i]) {
+                if (j < nums[i-1]) {
                     dp[i][j] = dp[i-1][j];
                 } else {
-                    dp[i][j] = dp[i-1][j] || dp[i-1][j-nums[i]];
+                    dp[i][j] = dp[i-1][j] || dp[i-1][j-nums[i-1]];
                 }
                 // 剪枝
                 if (dp[i][target]) {
@@ -61,7 +55,7 @@ public class CanPartition {
             }
         }
 
-        return dp[nums.length - 1][target];
+        return dp[n][target];
     }
 
     /**
@@ -90,19 +84,15 @@ public class CanPartition {
         boolean[] dp = new boolean[target + 1];
         // 边界
         dp[0] = true;
-        if (nums[0] <= target) {
-            dp[nums[0]] = true;
-        }
-
         // 对于二维数组，外层从上往下
-        for (int i = 1; i < nums.length; i++) {
+        for (int num : nums) {
             // 内层从后往前，若j < nums[i]则无法放入，dp[j]不会更新，因此可以提前结束
-            for (int j = target; j >= nums[i]; j--) {
+            for (int j = target; j >= num; j--) {
                 // 剪枝
                 if (dp[target]) {
                     return true;
                 }
-                dp[j] = dp[j] || dp[j-nums[i]];
+                dp[j] = dp[j] || dp[j - num];
             }
         }
 

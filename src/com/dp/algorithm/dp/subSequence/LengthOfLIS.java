@@ -4,19 +4,18 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * 300_最长递增子序列_中等
+ * leetcode_300_最长递增子序列_中等
+ *
+ * reviewed at 2023.05.05
  *
  * @author liuxucheng
  * @since 2021/5/20
  */
 public class LengthOfLIS {
 
-    public static void main(String[] args) {
-        LengthOfLIS test =new LengthOfLIS();
-    }
-
     /**
-     * dp
+     * dp[i]表示以nums[i]为后缀的递增子序列的长度
+     * 注意，LIS问题的dp数组定义和其他子序列问题不同
      *
      * @param nums
      * @return

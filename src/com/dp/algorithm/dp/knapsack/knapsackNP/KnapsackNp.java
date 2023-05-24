@@ -78,12 +78,10 @@ public class KnapsackNp {
     public static int maxValue3(int n, int v, int[] w, int[] c) {
         int[] dp = new int[v+1];
 
-        for (int i = 1; i <= n; i++) {
+        for (int i = 0; i < n; i++) {
             // 与0-1背包不同的是遍历顺序不变
-            for (int j = 1; j <= v; j++) {
-                if (j >= w[i-1]) {
-                    dp[j] = Math.max(dp[j], dp[j - w[i - 1]] + c[i - 1]);
-                }
+            for (int j = w[i]; j <= v; j++) {
+                dp[j] = Math.max(dp[j], dp[j - w[i]] + c[i]);
             }
         }
 

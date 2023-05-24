@@ -1,7 +1,10 @@
 package com.dp.algorithm.dp.stock;
 
 /**
- * 123_买卖股票的最佳时机3
+ * leetcode_123_买卖股票的最佳时机3_困难
+ * 最多只能交易2次，不能同时进行多笔交易
+ *
+ * reviewed at 2023.05.05
  *
  * @author liuxucheng
  * @since 2022/3/6
@@ -29,7 +32,7 @@ public class MaxProfit3 {
 
         for (int i = 1; i < prices.length; i++) {
             dp[i][1][0] = Math.max(dp[i-1][1][0], dp[i-1][1][1] + prices[i]);
-            dp[i][1][1] = Math.max(dp[i-1][1][1], - prices[i]);
+            dp[i][1][1] = Math.max(dp[i-1][1][1], -prices[i]);
             dp[i][2][0] = Math.max(dp[i-1][2][0], dp[i-1][2][1] + prices[i]);
             dp[i][2][1] = Math.max(dp[i-1][2][1], dp[i-1][1][0] - prices[i]);
         }
@@ -38,12 +41,35 @@ public class MaxProfit3 {
     }
 
     /**
-     * 状态压缩
+     * 仅适用于本题，将当天是否持股和买进次数2个状态进行了合并
      *
      * @param prices
      * @return
      */
-    public static int maxProfit2(int[] prices) {
+    public int maxProfit2(int[] prices) {
+        int n = prices.length;
+        int[][] dp = new int[n][4];
+        // 初始边界
+        dp[0][0] = -prices[0];
+        dp[0][1] = 0;
+        dp[0][2] = -prices[0];
+        dp[0][3] = 0;
+        for (int i = 1; i < n; i++) {
+            dp[i][0] = Math.max(dp[i - 1][0], -prices[i]);
+            dp[i][1] = Math.max(dp[i - 1][1], dp[i - 1][0] + prices[i]);
+            dp[i][2] = Math.max(dp[i - 1][2], dp[i - 1][1] - prices[i]);
+            dp[i][3] = Math.max(dp[i - 1][3], dp[i - 1][2] + prices[i]);
+        }
+        return dp[n - 1][3];
+    }
+
+    /**
+     * 状态压缩，难理解，不推荐
+     *
+     * @param prices
+     * @return
+     */
+    public static int maxProfit3(int[] prices) {
         // 最多进行1次买入的最大利润
         int buy1 = -prices[0];
         // 最多进行1次买入和1次卖出的最大利润

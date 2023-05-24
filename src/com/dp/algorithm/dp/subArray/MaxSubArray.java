@@ -1,7 +1,9 @@
 package com.dp.algorithm.dp.subArray;
 
 /**
- * 53_最大子数组和_简单
+ * leetcode_53_最大子数组和_中等
+ *
+ * reviewed at 2023.05.05
  *
  * @author liuxucheng
  * @since 2021/5/26

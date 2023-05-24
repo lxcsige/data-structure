@@ -1,7 +1,5 @@
 package com.dp.algorithm.dp.knapsack.knapsackNP;
 
-import java.util.Arrays;
-
 /**
  * leetcode_322_零钱兑换_中等
  * 求最少硬币数
@@ -88,7 +86,8 @@ public class CoinChange {
     }
 
     /**
-     * 动态规划_v1
+     * dp[j] = Math.min(dp[j-coins[i]]+1), j >= coins[i]
+     * 注意点在于边界，dp[0] = 0，即目标金额为0时不需要任何硬币就可以凑出来
      *
      * @param coins
      * @param amount
@@ -96,51 +95,11 @@ public class CoinChange {
      */
     public int coinChange3(int[] coins, int amount) {
         int[] dp = new int[amount + 1];
-        // 初始化dp数组
-        Arrays.fill(dp, -1);
-        // 初始化状态
-        dp[0] = 0;
-        // 遍历状态参数，即目标金额
-        for (int i = 1; i < amount + 1; i++) {
-            // 模拟最大值
-            int minCount = amount + 1;
-            // 遍历硬币面值
-            for (int coin : coins) {
-                // 目标金额小于硬币面值，跳过
-                if (i < coin) {
-                    continue;
-                }
-                int restCount = dp[i - coin];
-                // 无法凑出剩余金额，跳过
-                if (restCount == -1) {
-                    continue;
-                }
-                minCount = Math.min(minCount, restCount + 1);
-            }
-            // 仅存在可用的硬币组合时，记录到dp数组
-            if (minCount !=  amount + 1) {
-                dp[i] = minCount;
-            }
-        }
-
-        return dp[amount];
-    }
-
-    /**
-     * 动态规划_v2，最优解，其实就是完全背包压缩状态之后的解法
-     * 注意点在于边界，dp[0] = 0，即目标金额为0时不需要任何硬币就可以凑出来
-     *
-     * @param coins
-     * @param amount
-     * @return
-     */
-    public int coinChange4(int[] coins, int amount) {
-        int[] dp = new int[amount + 1];
         for (int i = 1; i < amount + 1; i++) {
             // 相当于初始化为正无穷
             dp[i] = amount + 1;
             for (int coin : coins) {
-                // 目标金额不小于硬币面ggp值
+                // 目标金额不小于硬币面值
                 if (i >= coin) {
                     dp[i] = Math.min(dp[i], dp[i - coin] + 1);
                 }

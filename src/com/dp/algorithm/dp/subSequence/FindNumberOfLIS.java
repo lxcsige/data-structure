@@ -1,9 +1,9 @@
 package com.dp.algorithm.dp.subSequence;
 
-import java.util.Arrays;
-
 /**
- * 673_最长递增子序列的个数_中等
+ * leetcode_673_最长递增子序列的个数_中等
+ *
+ * reviewed at 2023.05.05
  *
  * @author xucheng.liu
  * @since 2022/3/17

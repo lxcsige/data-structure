@@ -6,11 +6,7 @@ package com.dp.algorithm.dp;
  */
 public class MaxSumDivThree {
 
-    public static void main(String[] args) {
-        maxSumDivThree(new int[]{2,19,6,16,5,10,7,4,11,6});
-    }
-
-    public static int maxSumDivThree(int[] nums) {
+    public int maxSumDivThree(int[] nums) {
         int[][] dp = new int[nums.length][3];
 
         // 初始状态

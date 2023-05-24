@@ -1,20 +1,19 @@
 package com.dp.algorithm.dp.stock;
 
 /**
- * 121_买卖股票的最佳时机
+ * leetcode_121_买卖股票的最佳时机_简单
+ * 只能交易1次
+ *
+ * reviewed at 2023.05.04
  *
  * @author liuxucheng
  * @since 2022/2/27
  */
 public class MaxProfit {
 
-    public static void main(String[] args) {
-
-    }
-
     /**
      * 一次遍历，寻找局部最低价，如果大于局部最低价则尝试求差值
-     * 个人感觉属于贪心算法
+     * 贪心
      *
      * @param prices
      * @return
@@ -22,13 +21,13 @@ public class MaxProfit {
     public int maxProfit(int[] prices) {
         int minPrice = Integer.MAX_VALUE;
         int res = 0;
-        for (int i = 0; i < prices.length; i++) {
+        for (int price : prices) {
             // 如果价格低于最低价，更新
-            if (prices[i] < minPrice) {
-                minPrice = prices[i];
+            if (price < minPrice) {
+                minPrice = price;
             } else {
                 // 否则判断此时卖出是否高于最大利润
-                res = Math.max(res, prices[i] - minPrice);
+                res = Math.max(res, price - minPrice);
             }
         }
         return res;
@@ -73,18 +72,18 @@ public class MaxProfit {
     /**
      * 股票问题通用解法，将无后效性的约束条件转化为状态参数
      * dp[i][j]表示前i天的最大利润，j表示当天是否持股，0-未持股，1-持股
-     * dp[i][0] = max(dp[i-1][0], dp[i-1][1] + prices[i])
-     * dp[i][1] = max(dp[i-1][1], dp[i-1][0] - prices[i])
-     * 由于只能交易一次，因此dp[i][0] = 0
+     * dp[i][0] = max(dp[i-1][0], dp[i-1][1] + prices[i])，第i-1天也未持股或第i-1天持股第i天卖了
+     * dp[i][1] = max(dp[i-1][1], dp[i-1][0] - prices[i])，第i-1天也持股或第i-1天未持股第i天买进
+     * 由于只能交易一次，因此dp[i][1] = max(dp[i-1][1], -prices[i])
      *
      * @param prices
      * @return
      */
     public int maxProfit4(int[] prices) {
         int[][] dp = new int[prices.length][2];
+        // 初始边界
         dp[0][0] = 0;
         dp[0][1] = -prices[0];
-
         for (int i = 1; i < prices.length; i++) {
             dp[i][0] = Math.max(dp[i-1][1] + prices[i], dp[i-1][0]);
             dp[i][1] = Math.max(dp[i-1][1], -prices[i]);
@@ -104,7 +103,6 @@ public class MaxProfit {
         int profit0 = 0;
         // 当天持股的最大利润
         int profit1 = -prices[0];
-
         for (int i = 1; i < prices.length; i++) {
             profit0 = Math.max(profit0, profit1 + prices[i]);
             profit1 = Math.max(profit1, -prices[i]);

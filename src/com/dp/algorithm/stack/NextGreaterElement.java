@@ -11,7 +11,9 @@ import java.util.Map;
 public class NextGreaterElement {
 
     public int[] nextGreaterElement(int[] nums1, int[] nums2) {
+        // 记录元素和下一个更大元素的映射
         Map<Integer, Integer> map = new HashMap<>();
+        // 非严格单调递减栈
         Deque<Integer> stack = new ArrayDeque<>();
         for (int i = 0; i < nums2.length; i++) {
             while (!stack.isEmpty() && nums2[i] > stack.peek()) {

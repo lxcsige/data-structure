@@ -1,7 +1,9 @@
-package com.dp.algorithm.dp.subSequence;
+package com.dp.algorithm.dp.rob;
 
 /**
  * leetcode_213_打家劫舍2_中等
+ *
+ * reviewed at 2023.05.04
  *
  * @author xucheng.liu
  * @since 2022/5/15

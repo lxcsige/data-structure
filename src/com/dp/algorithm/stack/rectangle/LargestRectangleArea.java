@@ -1,4 +1,4 @@
-package com.dp.algorithm.stack;
+package com.dp.algorithm.stack.rectangle;
 
 import java.util.ArrayDeque;
 import java.util.Deque;

@@ -32,4 +32,21 @@ public class RemoveDuplicates {
         }
         return new String(res);
     }
+
+    public String removeDuplicates2(String s) {
+        StringBuilder stack = new StringBuilder();
+        int top = -1;
+        for (int i = 0; i < s.length(); i++) {
+            // 相等，出栈
+            if (stack.length() > 0 && stack.charAt(top) == s.charAt(i)) {
+                stack.deleteCharAt(top);
+                top--;
+            } else {
+                // 不等，进栈
+                stack.append(s.charAt(i));
+                top++;
+            }
+        }
+        return stack.toString();
+    }
 }

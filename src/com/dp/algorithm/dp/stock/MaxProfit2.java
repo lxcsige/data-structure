@@ -1,16 +1,15 @@
 package com.dp.algorithm.dp.stock;
 
 /**
- * 122_买卖股票的最佳时机2
+ * leetcode_122_买卖股票的最佳时机2_中等
+ * 不限制交易次数，但不能同时进行多笔交易
+ *
+ * reviewed at 2023.05.05
  *
  * @author liuxucheng
  * @since 2022/3/4
  */
 public class MaxProfit2 {
-
-    public static void main(String[] args) {
-
-    }
 
     /**
      * DP，由于第i天的决策依赖于第i-1天，所以把约束条件--「是否持股」加入到状态参数中
@@ -18,7 +17,7 @@ public class MaxProfit2 {
      * @param prices
      * @return
      */
-    public static int maxProfit(int[] prices) {
+    public int maxProfit(int[] prices) {
         int[][] dp = new int[prices.length][2];
         dp[0][1] = -prices[0];
 

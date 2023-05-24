@@ -1,19 +1,18 @@
 package com.dp.algorithm.dp.subSequence;
 
 /**
- * 516_最长回文子序列_中等
+ * leetcode_516_最长回文子序列_中等
+ *
+ * reviewed at 2023.05.05
  *
  * @author liuxucheng
  * @since 2021/5/23
  */
 public class LongestPalindromeSubseq {
 
-    public static void main(String[] args) {
-
-    }
-
     /**
      * 动态规划，dp[i][j]表示s[i...j]的最长回文子序列长度
+     * 注意和回文子串的区别
      *
      * @param s
      * @return

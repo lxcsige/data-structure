@@ -37,9 +37,6 @@ public class CombinationSum2 {
     }
 
     private void dfs(int[] candidates, int target, int begin, List<Integer> combination, List<List<Integer>> res) {
-        if (target < 0) {
-            return;
-        }
         if (target == 0) {
             res.add(new ArrayList<>(combination));
             return;

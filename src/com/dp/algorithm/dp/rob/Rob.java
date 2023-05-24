@@ -1,7 +1,9 @@
-package com.dp.algorithm.dp.subSequence;
+package com.dp.algorithm.dp.rob;
 
 /**
  * leetcode_198_打家劫舍_中等
+ *
+ * reviewed at 2023.05.04
  *
  * @author xucheng.liu
  * @since 2022/5/15
@@ -10,7 +12,9 @@ public class Rob {
 
     /**
      * dp[n]表示偷前n间房的最大金额
-     * dp[n] = Math.max(dp[n-1], dp[n-2] + nums[n])，前者表示不偷第n间房的收益，后者表示偷第n间房的收益
+     * dp[i] = Math.max(dp[i-1], dp[i-2] + nums[i])，
+     * 前者表示不偷第i间房的收益，此时dp[i] = dp[i - 1]
+     * 后者表示偷第i间房的收益
      *
      * @param nums
      * @return

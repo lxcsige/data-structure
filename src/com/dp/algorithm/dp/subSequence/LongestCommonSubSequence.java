@@ -1,16 +1,12 @@
 package com.dp.algorithm.dp.subSequence;
 
 /**
- * 1143_最长公共子序列_中等
+ * leetcode_1143_最长公共子序列_中等
  *
  * @author liuxucheng
  * @since 2021/5/20
  */
 public class LongestCommonSubSequence {
-
-    public static void main(String[] args) {
-
-    }
 
     public int longestCommonSubSequence1(String text1, String text2) {
         int[][] dp = new int[text1.length()][text2.length()];
@@ -32,8 +28,17 @@ public class LongestCommonSubSequence {
         return dp[m][n];
     }
 
+    /**
+     * text1[i - 1] == text2[j - 1], dp[i][j] = dp[i - 1][j - 1] + 1
+     * text2[i - 1] != text2[j - 1], dp[i][j] = Math.max(dp[i - 1][j], dp[i][j - 1])
+     *
+     * @param text1
+     * @param text2
+     * @return
+     */
     public int longestCommonSubSequence2(String text1, String text2) {
         // dp[m][n]表示text1前m个元素和text2前n个元素的最长公共子序列长度
+        // 避免第一行和第一列的初始化
         int[][] dp = new int[text1.length() + 1][text2.length() + 1];
         for (int i = 1; i <= text1.length(); i++) {
             for (int j = 1; j <= text2.length(); j++) {

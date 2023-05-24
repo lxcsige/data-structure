@@ -1,10 +1,10 @@
-package com.dp.algorithm.linkedlist;
+package com.dp.algorithm.design;
 
 import java.util.HashMap;
 import java.util.Map;
 
 /**
- * LRU
+ * leetcode_146_LRU缓存_中等
  *
  * @author liuxucheng
  * @since 2021/5/11
@@ -41,45 +41,45 @@ public class LRUCache {
         if (node == null) {
             return -1;
         }
-        // 如果存在则移动到双向链表头部，包含remove和add2Head两步操作
+        // 如果存在则移动到双向链表尾部，包含remove和add2Tail两步操作
         // 节点可能在链表中间，使用双向链表效率更高，因此Node中包含prev指针
-        move2Head(node);
+        move2Tail(node);
         return node.value;
     }
 
     public void put(int key, int value) {
         Node node = cache.get(key);
-        // 不存在该key
+        // 不存在该key，需要插入
         if (node == null) {
-            // 插入之前容量已满，删除尾部节点
+            // 插入之前容量已满，删除头部节点
             if (size == capacity) {
-                // 删除尾节点
-                Node tail = removeTail();
+                // 删除头节点
+                Node head = removeHead();
                 // 同时需要从map中删除，因此node中需要包含key
-                cache.remove(tail.key);
+                cache.remove(head.key);
                 size--;
             }
             node = new Node(key, value);
             cache.put(key, node);
-            add2Head(node);
+            add2Tail(node);
             size++;
         } else {
             // 修改节点的value
             node.value = value;
-            // 将节点移动到双向链表头部
-            move2Head(node);
+            // 将节点移动到双向链表尾部
+            move2Tail(node);
         }
     }
 
-    private void add2Head(Node node) {
-        node.next = head.next;
-        node.prev = head;
-        head.next.prev = node;
-        head.next = node;
+    private void add2Tail(Node node) {
+        tail.prev.next = node;
+        node.prev = tail.prev;
+        node.next = tail;
+        tail.prev = node;
     }
 
-    private Node removeTail() {
-        Node res = tail.prev;
+    private Node removeHead() {
+        Node res = head.next;
         removeNode(res);
         return res;
     }
@@ -89,12 +89,12 @@ public class LRUCache {
         node.next.prev = node.prev;
     }
 
-    private void move2Head(Node node) {
+    private void move2Tail(Node node) {
         removeNode(node);
-        add2Head(node);
+        add2Tail(node);
     }
 
-    public static class Node {
+    static class Node {
 
         private int key;
 

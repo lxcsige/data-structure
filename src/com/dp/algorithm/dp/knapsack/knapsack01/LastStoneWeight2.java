@@ -35,17 +35,26 @@ public class LastStoneWeight2 {
         return sum - 2 * dp[n][target];
     }
 
+    /**
+     * 状态压缩
+     * dp[j]表示容量为j的背包，最多可以背的最大重量
+     * dp[j] = Math.max(dp[j], dp[j - stones[i]] + stones[i])
+     *
+     * @param stones
+     * @return
+     */
     public int lastStoneWeightII2(int[] stones) {
         int sum = 0;
         for (int stone : stones) {
             sum += stone;
         }
         int target = sum / 2;
-        int n = stones.length;
         int[] dp = new int[target + 1];
-        for (int i = 0; i < n; i++) {
-            for (int j = target; j >= stones[i]; j--) {
-                dp[j] = Math.max(dp[j], dp[j - stones[i]] + stones[i]);
+        // 初始化边界
+        // dp[0] = 0;
+        for (int stone : stones) {
+            for (int j = target; j >= stone; j--) {
+                dp[j] = Math.max(dp[j], dp[j - stone] + stone);
             }
         }
         return sum - 2 * dp[target];

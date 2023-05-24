@@ -8,11 +8,14 @@ package com.dp.algorithm.slidingwindow;
  */
 public class MinSubArrayLen {
 
-    public static void main(String[] args) {
-        System.out.println(minSubArrayLen(4, new int[]{1,4,4}));
-    }
-
-    public static int minSubArrayLen(int target, int[] nums) {
+    /**
+     * 滑动窗口，因为正整数的前提，因此才可以在sum >= target的情况下，进行窗口左移
+     *
+     * @param target
+     * @param nums
+     * @return
+     */
+    public int minSubArrayLen(int target, int[] nums) {
         int left = 0, right = 0, sum = 0, res = Integer.MAX_VALUE;
         for (; right < nums.length; right++) {
             sum += nums[right];

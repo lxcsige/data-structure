@@ -1,17 +1,14 @@
 package com.dp.algorithm.dp.subArray;
 
 /**
- * 152_乘积最大子数组_中等
+ * leetcode_152_乘积最大子数组_中等
+ *
+ * reviewed at 2023.05.05
  *
  * @author xucheng.liu
  * @since 2022/2/7
  */
 public class MaxProduct {
-
-    public static void main(String[] args) {
-        int[] nums = new int[]{-4,-3,-2};
-        System.out.println("res = " + maxProduct(nums));
-    }
 
     /**
      * 如果仅用f(x)表示以nums[x]结尾的最大子数组乘积，并不能满足最优子结构，即后面的子问题不能根据前面的子问题推导求解
@@ -21,7 +18,7 @@ public class MaxProduct {
      * @param nums
      * @return
      */
-    public static int maxProduct(int[] nums) {
+    public int maxProduct(int[] nums) {
         // f_max(x-1), f_min(x-1)
         int maxProduct = nums[0], minProduct = nums[0], res = nums[0], tmpProduct;
         for (int i = 1; i < nums.length; i++) {

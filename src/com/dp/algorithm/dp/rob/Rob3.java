@@ -1,4 +1,4 @@
-package com.dp.algorithm.dp.subSequence;
+package com.dp.algorithm.dp.rob;
 
 import com.dp.algorithm.binarytree.TreeNode;
 
@@ -7,6 +7,10 @@ import java.util.Map;
 
 /**
  * leetcode_337_打家劫舍3_中等
+ *
+ * 树形DP
+ *
+ * reviewed at 2023.05.04
  *
  * @author xucheng.liu
  * @since 2022/5/16
@@ -53,7 +57,7 @@ public class Rob3 {
     }
 
     /**
-     * 状态压缩
+     * 状态压缩，root的最大金额仅和f(l)、g(l)、f(r)以及g(r)有关，因此递归时可以返回该节点的f和g值
      *
      * @param root
      * @return
@@ -70,13 +74,16 @@ public class Rob3 {
      * @return
      */
     private int[] dfs2(TreeNode root) {
+        int[] res = new int[2];
+        // base case
         if (root == null) {
-            return new int[]{0, 0};
+            return res;
         }
         int[] left = dfs2(root.left);
         int[] right = dfs2(root.right);
-        int[] res = new int[2];
+        // 选择root节点，left和right节点都不能选
         res[0] = left[1] + right[1] + root.val;
+        // 不选root节点，left和right都可以选，但不一定要选
         res[1] = Math.max(left[0], left[1]) + Math.max(right[0], right[1]);
         return res;
     }

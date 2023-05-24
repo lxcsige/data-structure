@@ -1,7 +1,7 @@
 package com.dp.algorithm.dp.subSequence;
 
 /**
- * 712_两个字符串的最小ASCII删除和
+ * leetcode_712_两个字符串的最小ASCII删除和_中等
  *
  * @author liuxucheng
  * @since 2021/5/22

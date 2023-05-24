@@ -1,14 +1,15 @@
 package com.dp.algorithm.dp.stock;
 
 /**
+ * leetcode_188_买卖股票的最佳时机IV_困难
+ * 最多完成k笔交易，不能同时进行多笔交易
+ *
+ * reviewed at 2023.05.05
+ *
  * @author liuxucheng
  * @since 2022/3/7
  */
 public class MaxProfit4 {
-
-    public static void main(String[] args) {
-
-    }
 
     public int maxProfit(int k, int[] prices) {
         if (k == 0 || prices.length == 0) {

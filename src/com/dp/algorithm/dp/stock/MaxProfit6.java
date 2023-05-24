@@ -1,16 +1,14 @@
 package com.dp.algorithm.dp.stock;
 
 /**
- * 714_买卖股票的最佳时机含手续费
+ * leetcode_714_买卖股票的最佳时机含手续费_困难
+ *
+ * reviewed at 2023.05.05
  *
  * @author liuxucheng
  * @since 2022/3/9
  */
 public class MaxProfit6 {
-
-    public static void main(String[] args) {
-
-    }
 
     /**
      * 通用思路加上手续费

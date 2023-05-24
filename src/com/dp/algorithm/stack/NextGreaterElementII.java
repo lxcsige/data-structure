@@ -21,7 +21,9 @@ public class NextGreaterElementII {
         int n = nums.length;
         int[] res = new int[n];
         Arrays.fill(res, -1);
+        // 非严格单调递减栈
         Deque<Integer> stack = new ArrayDeque<>();
+        // 处理循环数组
         for (int i = 0; i < 2 * n - 1; i++) {
             while (!stack.isEmpty() && nums[i % n] > nums[stack.peek()]) {
                 res[stack.pop()] = nums[i % n];

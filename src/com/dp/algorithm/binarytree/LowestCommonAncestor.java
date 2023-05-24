@@ -13,10 +13,10 @@ public class LowestCommonAncestor {
     }
 
     /**
-     * 先序遍历
-     * 前提条件：节点p和q一定存在于以root为根节点的二叉树中
+     * 后序遍历，前提条件：节点p和q一定存在于以root为根节点的二叉树中
      *
-     * 函数定义：如果同时包含p和q则返回最近公共祖先节点，否则返回包含的p或q节点（不是很清晰）
+     * 函数定义：如果同时包含p和q则返回最近公共祖先节点，否则返回包含的p或q节点
+     * 由于节点p和q一定存在，因此最后返回的一定是其最近公共祖先节点
      *
      * @param root
      * @param p
@@ -79,26 +79,5 @@ public class LowestCommonAncestor {
             res = root;
         }
         return left || right || root == p || root == q;
-    }
-
-    /**
-     * 后序遍历
-     * 含义：如果同时包含p和q，返回其最小公共祖先节点，否则返回p或q或null
-     *
-     * @param root
-     * @param p
-     * @param q
-     * @return
-     */
-    public TreeNode lowestCommonAncestor3(TreeNode root, TreeNode p, TreeNode q) {
-        if (root == null || root == p || root == q) {
-            return root;
-        }
-        TreeNode left = lowestCommonAncestor3(root.left, p, q);
-        TreeNode right = lowestCommonAncestor3(root.right, p, q);
-        if (left != null && right != null) {
-            return root;
-        }
-        return left == null ? right : left;
     }
 }

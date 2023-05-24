@@ -15,12 +15,13 @@ public class DailyTemperatures {
      * @return
      */
     public int[] dailyTemperatures(int[] temperatures) {
-        // 单调递减，可以找到左起第一个尚未确定结果的位置
+        // 非严格单调递减栈
         Deque<Integer> stack = new ArrayDeque<>();
         int n = temperatures.length;
         int[] res = new int[n];
         for (int i = 0; i < n; i++) {
             while (!stack.isEmpty() && temperatures[i] > temperatures[stack.peek()]) {
+                // 此时可以找到peek下一个更高温度
                 int peek = stack.pop();
                 res[peek] = i - peek;
             }

@@ -14,38 +14,33 @@ public class RemoveDuplicateLetters {
     }
 
     public String removeDuplicateLetters(String s) {
-        int[] cnts = new int[26];
-        int letterCnt = 0;
-        char[] chs = s.toCharArray();
+        int[] counts = new int[26];
         int n = s.length();
         // 统计每个字母出现的次数
-        for (char ch : chs) {
-            if (cnts[ch - 'a'] == 0) {
-                letterCnt++;
-            }
-            cnts[ch - 'a']++;
+        for (int i = 0; i < n; i++) {
+            counts[s.charAt(i) - 'a']++;
         }
         // 是否在栈中
         boolean[] visits = new boolean[26];
-        Deque<Character> stack = new ArrayDeque<>();
+        StringBuilder stack = new StringBuilder();
         for (int i = 0; i < n; i++) {
-            if (!visits[chs[i] - 'a']) {
-                // 确保stack.peek()后面仍然可能出现，只有这样才能移除
-                while (!stack.isEmpty() && chs[i] < stack.peek() && cnts[stack.peek() - 'a'] > 0) {
-                    char top = stack.pop();
-                    visits[top - 'a'] = false;
+            char ch = s.charAt(i);
+            // 栈中不存在才能入栈
+            if (!visits[ch - 'a']) {
+                // 当前字符小于栈顶字符，如果栈顶字符后面还可能出现，那么可以出栈
+                while (stack.length() > 0 && ch < stack.charAt(stack.length() - 1)
+                        && counts[stack.charAt(stack.length() - 1) - 'a'] > 0) {
+                    visits[stack.charAt(stack.length() - 1) - 'a'] = false;
+                    stack.deleteCharAt(stack.length() - 1);
                 }
-                stack.push(chs[i]);
-                visits[chs[i] - 'a'] = true;
+                // 入栈
+                stack.append(ch);
+                visits[ch - 'a'] = true;
             }
             // 剩余出现次数-1
-            cnts[chs[i] - 'a']--;
+            // 这一步所在的位置很关键，无论栈中有没有chs[i]，都需要对其次数进行递减
+            counts[ch - 'a']--;
         }
-        char[] res = new char[letterCnt];
-        int index = letterCnt - 1;
-        while (!stack.isEmpty()) {
-            res[index--] = stack.pop();
-        }
-        return new String(res);
+        return stack.toString();
     }
 }

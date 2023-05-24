@@ -1,7 +1,7 @@
 package com.dp.algorithm.dp.knapsack.knapsack01;
 
 /**
- * 474_一和零
+ * leetcode_474_一和零_中等
  *
  * @author xucheng.liu
  * @since 2022/2/9
@@ -64,10 +64,8 @@ public class FindMaxForm {
      * @return
      */
     public static int findMaxForm2(String[] strs, int m, int n) {
-        int l = strs.length;
         int[][] dp = new int[m + 1][n + 1];
-        for (int i = 1; i <= l; i++) {
-            String str = strs[i-1];
+        for (String str : strs) {
             // 该字符串中'0'和'1'的数量
             int tmpM = 0, tmpN = 0;
             for (int p = 0; p < str.length(); p++) {

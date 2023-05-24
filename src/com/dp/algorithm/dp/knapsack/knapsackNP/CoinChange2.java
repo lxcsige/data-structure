@@ -2,7 +2,8 @@ package com.dp.algorithm.dp.knapsack.knapsackNP;
 
 /**
  * leetcode_518_零钱兑换2_中等
- * 求硬币组合数
+ *
+ * reviewed at 2023.05.04
  *
  * @author liuxucheng
  * @since 2021/6/9
@@ -24,10 +25,6 @@ public class CoinChange2 {
      * @return
      */
     public static int change(int amount, int[] coins) {
-        if (amount == 0) {
-            return 0;
-        }
-
         int[][] dp = new int[coins.length + 1][amount + 1];
         // 初始化边界
         for (int i = 0; i <= coins.length; i++) {
@@ -59,13 +56,10 @@ public class CoinChange2 {
      * @return
      */
     public static int change2(int amount, int[] coins) {
-        if (amount == 0) {
-            return 0;
-        }
-
+        // dp[i]表示目标金额i的硬币组合数
         int[] dp = new int[amount + 1];
+        // 边界
         dp[0] = 1;
-
         for (int coin : coins) {
             // 与01背包不同的是正序遍历
             for (int i = coin; i <= amount; i++) {
