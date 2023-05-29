@@ -1,51 +1,43 @@
 package com.dp.algorithm.slidingwindow;
 
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
-
 /**
+ * leetcode_567_字符串的排列_中等
+ *
  * @author xucheng.liu
  * @since 2022/5/2
  */
 public class CheckInclusion {
 
     public static void main(String[] args) {
-        System.out.println(checkInclusion("ab", "eidboaoo"));
+        System.out.println(checkInclusion2("abcdxabcde", "abcdeabcdx"));
     }
 
     public static boolean checkInclusion(String s1, String s2) {
-        if (s1.length() > s2.length()) {
+        int m = s1.length(), n = s2.length();
+        if (m > n) {
             return false;
         }
-
-        Map<Character, Integer> s1Map = new HashMap<>();
-        for (char c : s1.toCharArray()) {
-            s1Map.put(c, s1Map.getOrDefault(c, 0) + 1);
+        int[] arr1 = new int[26];
+        int[] arr2 = new int[26];
+        for (int i = 0; i < m; i++) {
+            arr1[s1.charAt(i) - 'a']++;
         }
-
-        for (int i = 0; i <= s2.length() - s1.length(); i++) {
-            Map<Character, Integer> s2Map = new HashMap<>();
-            char s2c;
-            int j = i;
-            for (; j < i + s1.length(); j++) {
-                s2c = s2.charAt(j);
-                if (!s1Map.containsKey(s2c)) {
-                    break;
-                }
-                s2Map.put(s2c, s2Map.getOrDefault(s2c, 0) + 1);
-                if (s2Map.get(s2c) > s1Map.get(s2c)) {
-                    break;
-                }
+        for (int i = 0, j = 0; j < n; j++) {
+            char ch = s2.charAt(j);
+            arr2[ch - 'a']++;
+            // 收缩窗口
+            while (arr2[ch - 'a'] > arr1[ch - 'a']) {
+                char left = s2.charAt(i++);
+                arr2[left - 'a']--;
             }
-            if (j == i + s1.length()) {
+            if (j - i + 1 == m) {
                 return true;
             }
         }
         return false;
     }
 
-    public boolean checkInclusion2(String s1, String s2) {
+    public static boolean checkInclusion2(String s1, String s2) {
         int n = s1.length(), m = s2.length();
         if (n > m) {
             return false;
@@ -53,17 +45,25 @@ public class CheckInclusion {
         int[] cnt1 = new int[26];
         int[] cnt2 = new int[26];
         for (int i = 0; i < n; ++i) {
-            ++cnt1[s1.charAt(i) - 'a'];
-            ++cnt2[s2.charAt(i) - 'a'];
+            cnt1[s1.charAt(i) - 'a']++;
         }
-        if (Arrays.equals(cnt1, cnt2)) {
-            return true;
-        }
-        for (int i = n; i < m; ++i) {
-            ++cnt2[s2.charAt(i) - 'a'];
-            --cnt2[s2.charAt(i - n) - 'a'];
-            if (Arrays.equals(cnt1, cnt2)) {
-                return true;
+        int count = 0;
+        for (int i = 0, j = 0; j < m; j++) {
+            char ch = s2.charAt(j);
+            cnt2[ch - 'a']++;
+            if (cnt2[ch - 'a'] <= cnt1[ch - 'a']) {
+                count++;
+            }
+            // 收缩
+            while (j - i + 1 >= n) {
+                if (count == n) {
+                    return true;
+                }
+                char left = s2.charAt(i++);
+                if (cnt2[left] <= cnt1[left]) {
+                    count--;
+                }
+                cnt2[left]--;
             }
         }
         return false;

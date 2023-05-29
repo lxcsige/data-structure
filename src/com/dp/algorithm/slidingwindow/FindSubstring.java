@@ -14,10 +14,12 @@ import java.util.Map;
 public class FindSubstring {
 
     public static void main(String[] args) {
-
+        FindSubstring test = new FindSubstring();
+        test.findSubstring2("barfoothefoobarman", new String[]{"foo","bar"});
     }
 
     /**
+     * 暴力解法
      *
      * @param s 字符串
      * @param words 单词数组
@@ -31,7 +33,9 @@ public class FindSubstring {
 
         List<Integer> res = new ArrayList<>();
         int sLen = s.length();
+        // 单词数量
         int wordCnt = words.length;
+        // 单词长度
         int wordLen = words[0].length();
         // 遍历字符串，i表示左边界，wordCnt * wordLen个连续字符为一组
         for (int i = 0; i <= sLen - wordCnt * wordLen; i++) {
@@ -54,6 +58,45 @@ public class FindSubstring {
             }
         }
 
+        return res;
+    }
+
+    /**
+     * 滑动窗口优化
+     *
+     * @param s
+     * @param words
+     * @return
+     */
+    public List<Integer> findSubstring2(String s, String[] words) {
+        int sLen = s.length();
+        int wordCnt = words.length;
+        int wordLen = words[0].length();
+        int subLen = wordLen * wordCnt;
+        Map<String, Integer> word2CntMap = new HashMap<>();
+        for (String word : words) {
+            word2CntMap.put(word, word2CntMap.getOrDefault(word, 0) + 1);
+        }
+        List<Integer> res = new ArrayList<>();
+        // 枚举不同的起点
+        for (int i = 0; i < wordLen; i++) {
+            Map<String, Integer> windowMap = new HashMap<>();
+            for (int j = i, l = i; j <= sLen - wordLen; j += wordLen) {
+                // 该字符可能在单词表中，也可能不在
+                String word = s.substring(j, j + wordLen);
+                windowMap.put(word, windowMap.getOrDefault(word, 0) + 1);
+                // 当前单词次数超了，需要滑动左边界
+                while (windowMap.get(word) > word2CntMap.getOrDefault(word, 0)) {
+                    String leftWord = s.substring(l, l + wordLen);
+                    l += wordLen;
+                    windowMap.put(leftWord, windowMap.get(leftWord) - 1);
+                }
+                // 符合条件
+                if (j - l + wordLen == subLen) {
+                    res.add(l);
+                }
+            }
+        }
         return res;
     }
 }

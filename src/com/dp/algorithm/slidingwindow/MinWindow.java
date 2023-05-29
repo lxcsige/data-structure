@@ -12,72 +12,109 @@ import java.util.Map;
 public class MinWindow {
 
     public static void main(String[] args) {
-        System.out.println(minWindow("ADOBECODEBANC", "ABC"));
     }
 
     /**
      * 滑动窗口
-     * 右边界一直向右移动，只有等到当前窗口包含所有字符串t中的所有字符时才会尝试右移左边界
+     * 窗口收缩的时机：
+     * 1. 左边界字符不在字符串t中
+     * 2. 左边界字符在字符串t中，但其在窗口内的数量大于t中该字符的数量，可以移除
      *
      * @param s
      * @param t
      * @return
      */
-    public static String minWindow(String s, String t) {
+    public String minWindow(String s, String t) {
+        // 字符串s中的字符和出现次数的映射
+        Map<Character, Integer> sMap = new HashMap<>();
         // 字符串t中的字符和出现次数的映射
         Map<Character, Integer> tMap = new HashMap<>();
-        for (char c : t.toCharArray()) {
-            tMap.put(c, tMap.getOrDefault(c, 0) + 1);
+        for (int i = 0; i < t.length(); i++) {
+            tMap.put(t.charAt(i), tMap.getOrDefault(t.charAt(i), 0) + 1);
         }
-
-        // 遍历左指针
-        int left = 0;
         // 结果长度
         int len = Integer.MAX_VALUE;
         // 结果左边界
         int resLeft = -1;
-        // 结果右边界
-        int resRight = -1;
-        char sc, slc;
+        int cnt = 0;
+        for (int i = 0, j = 0; j < s.length(); j++) {
+            char ch = s.charAt(j);
+            if (!tMap.containsKey(ch)) {
+                continue;
+            }
+            sMap.put(ch, sMap.getOrDefault(ch, 0) + 1);
+            if (sMap.get(ch) <= tMap.get(ch)) {
+                cnt++;
+            }
+            // 窗口左边界右移
+            while (i < j) {
+                ch = s.charAt(i);
+                if (!sMap.containsKey(ch)) {
+                    i++;
+                } else if (sMap.get(ch) > tMap.get(ch)) {
+                    sMap.put(ch, sMap.get(ch) - 1);
+                    i++;
+                } else {
+                    break;
+                }
+            }
+            if (cnt == t.length() && len > j - i + 1) {
+                len = j - i + 1;
+                resLeft = i;
+            }
+        }
+
+        return resLeft == -1 ? "" : s.substring(resLeft, resLeft + len);
+    }
+
+    /**
+     * 窗口收缩时机：窗口覆盖字符串t
+     *
+     * @param s
+     * @param t
+     * @return
+     */
+    public String minWindow2(String s, String t) {
         // 字符串s中的字符和出现次数的映射
         Map<Character, Integer> sMap = new HashMap<>();
-        for (int right = 0; right < s.length(); right++) {
-            sc = s.charAt(right);
-            if (tMap.containsKey(sc)) {
-                sMap.put(sc, sMap.getOrDefault(sc, 0) + 1);
-
-                // 检查此时left和right之间的子串是否完全包含字符串t中的所有字符，是则尝试左移left指针
-                while(containsAll(sMap, tMap) && left <= right) {
-                    if (right - left + 1 < len) {
-                        // 更新结果
-                        len = right - left + 1;
-                        resLeft = left;
-                        resRight = right;
+        // 字符串t中的字符和出现次数的映射
+        Map<Character, Integer> tMap = new HashMap<>();
+        for (int i = 0; i < t.length(); i++) {
+            tMap.put(t.charAt(i), tMap.getOrDefault(t.charAt(i), 0) + 1);
+        }
+        // 结果长度
+        int len = Integer.MAX_VALUE;
+        // 结果左边界
+        int resLeft = -1;
+        int valid = 0;
+        for (int i = 0, j = 0; j < s.length(); j++) {
+            char ch = s.charAt(j);
+            if (!tMap.containsKey(ch)) {
+                continue;
+            }
+            sMap.put(ch, sMap.getOrDefault(ch, 0) + 1);
+            if (sMap.get(ch).equals(tMap.get(ch))) {
+                valid++;
+            }
+            // 窗口收缩时机：窗口覆盖字符串t
+            while (valid == tMap.size()) {
+                // 更新len
+                if (j - i + 1 < len) {
+                    len = j - i + 1;
+                    resLeft = i;
+                }
+                // 左边界右移
+                char left = s.charAt(i++);
+                if (sMap.containsKey(left)) {
+                    int leftCnt = sMap.get(left);
+                    sMap.put(left, leftCnt - 1);
+                    if (leftCnt == tMap.get(left)) {
+                        valid--;
                     }
-
-                    // left右移，同时更新sMap
-                    slc = s.charAt(left);
-                    if (tMap.containsKey(slc)) {
-                        sMap.put(slc, sMap.get(slc) - 1);
-                    }
-                    left++;
                 }
             }
         }
 
-        return resLeft == -1 ? "" : s.substring(resLeft, resRight + 1);
-    }
-
-    private static boolean containsAll(Map<Character, Integer> sMap, Map<Character, Integer> tMap) {
-        Character c;
-        int count;
-        for (Map.Entry<Character, Integer> entry : tMap.entrySet()) {
-            c = entry.getKey();
-            count = entry.getValue();
-            if (sMap.getOrDefault(c, 0) < count) {
-                return false;
-            }
-        }
-        return true;
+        return resLeft == -1 ? "" : s.substring(resLeft, resLeft + len);
     }
 }

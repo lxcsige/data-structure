@@ -12,23 +12,18 @@ public class RemoveDuplicates {
      * @return
      */
     public int removeDuplicates(int[] nums) {
-        if (nums.length < 2) {
-            return nums.length;
+        int n = nums.length;
+        if (n < 2) {
+            return n;
         }
-        // 插入指针
-        int i = 1;
-        // 遍历指针
-        int j = 1;
-        while (j < nums.length) {
-            // 和前一个元素相同，不需要插入到新位置
-            if (nums[j - 1] == nums[j]) {
-                j++;
-            }
-            // 和前一个元素不同，需要插入到新位置
-            else {
-                nums[i++] = nums[j++];
+        // 指向有效数组的右边界
+        int i = 0;
+        for (int j = 1; j < n; j++) {
+            // 和有效数组的边界元素不同，说明数组中没有，可以插入
+            if (nums[i] != nums[j]) {
+                nums[++i] = nums[j];
             }
         }
-        return i;
+        return i + 1;
     }
 }

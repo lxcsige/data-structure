@@ -6,7 +6,7 @@ import java.util.Map;
 import java.util.Set;
 
 /**
- * 最长无重复子串
+ * leetcode_3_最长无重复子串_中等
  *
  * @author liuxucheng
  * @since 2021/3/18
@@ -23,7 +23,7 @@ public class LengthOfLongestSubstring {
      * @param s
      * @return
      */
-    private static int lengthOfLongestSubString(String s) {
+    public static int lengthOfLongestSubString(String s) {
         if (s.length() == 0 || s.length() == 1) {
             return s.length();
         }
@@ -49,7 +49,7 @@ public class LengthOfLongestSubstring {
      * @param s
      * @return
      */
-    private static int lengthOfLongestSubstring1(String s) {
+    public int lengthOfLongestSubstring1(String s) {
         Set<Character> set = new HashSet<>();
         // 滑动窗口右边界
         int right = -1, res = 0;
@@ -70,17 +70,20 @@ public class LengthOfLongestSubstring {
         return res;
     }
 
-    private static int lengthOfLongestSubstring2(String s) {
+    public int lengthOfLongestSubstring2(String s) {
         Map<Character, Integer> map = new HashMap<>();
         int left = 0, right = 0, res = 0;
         for (; right < s.length(); right++) {
+            // 当前字符不一定在窗口内
             if (map.containsKey(s.charAt(right))) {
                 // 保证left不会往左移动
-                left = Math.max(left, map.get(s.charAt(left)) + 1);
+                // 1. 当前字符在窗口内，以abca为例，遍历到最后一个a时，left原本是0，需要更新为1
+                // 2. 当前字符不在窗口内，以abba为例，遍历到最后一个a时，map.get('a') == 0，此时不能将left更新为1
+                left = Math.max(left, map.get(s.charAt(right)) + 1);
             }
             // 更新index
             map.put(s.charAt(right), right);
-            res = Math.max(res, right -  left + 1);
+            res = Math.max(res, right - left + 1);
         }
 
         return res;
