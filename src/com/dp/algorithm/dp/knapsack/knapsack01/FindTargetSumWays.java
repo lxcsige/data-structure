@@ -14,7 +14,9 @@ public class FindTargetSumWays {
     }
 
     /**
-     * dp[i][j] = dp[i-1][j] + dp[i-1][j-nums[i]]
+     * dp[i][j] = dp[i-1][j] + dp[i-1][j-nums[i-1]], j >= nums[i-1]
+     * dp[i-1][j]：不放nums[i-1]的组合数
+     * dp[i-1][j-nums[i-1]]：放nums[i-1]的组合数
      *
      * @param nums
      * @param target

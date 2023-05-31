@@ -11,6 +11,7 @@ public class LastStoneWeight2 {
     /**
      * 转化为01背包问题
      * dp[i][j] = max(dp[i-1][j], dp[i-1][j-stones[i-1]] + stones[i-1])
+     * 价值和成本均为stones[i - 1]
      *
      * @param stones
      * @return

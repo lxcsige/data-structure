@@ -13,10 +13,7 @@ public class Divide {
 
     public int divide(int a, int b) {
         long x = a, y = b;
-        boolean isNeg = false;
-        if ((x > 0 && y < 0) || (x < 0 && y > 0)) {
-            isNeg = true;
-        }
+        boolean isNeg = (x > 0 && y < 0) || (x < 0 && y > 0);
         if (x < 0) {
             x = -x;
         }

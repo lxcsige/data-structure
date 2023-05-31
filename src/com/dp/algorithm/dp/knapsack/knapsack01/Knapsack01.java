@@ -79,11 +79,11 @@ public class Knapsack01 {
     public int maxValue2(int n, int w, int[] weights, int[] values) {
         int[] dp = new int[w + 1];
         // 遍历每件物品
-        for(int i = 1; i <= n; i++) {
+        for(int i = 0; i < n; i++) {
             // 逆序遍历背包容量
             // 正序可能出现一件物品多次放入的情况
-            for (int j = w; j >= weights[i-1]; j--) {
-                dp[j] = Math.max(dp[j], dp[j-weights[i-1]] + values[i-1]);
+            for (int j = w; j >= weights[i]; j--) {
+                dp[j] = Math.max(dp[j], dp[j-weights[i]] + values[i]);
             }
         }
 

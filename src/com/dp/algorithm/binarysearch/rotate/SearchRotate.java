@@ -1,7 +1,9 @@
-package com.dp.algorithm.binarysearch;
+package com.dp.algorithm.binarysearch.rotate;
 
 /**
  * leetcode_33_搜索旋转排序数组_中等
+ *
+ * reviewed at 2023.05.29
  *
  * @author liuxucheng
  * @since 2022/8/3
@@ -40,10 +42,11 @@ public class SearchRotate {
             // [l, mid]区间有序
             // 这里必须是>=，否则在用例：nums=[3,1], target = 1时会出现问题
             if (nums[mid] >= nums[left]) {
-                // target在[l, mid)区间内，二分查找
+                // 对于有序区间，可以通过比较左右边界和目标值的大小，判断是否落在该区间内
                 if (target >= nums[left] && target < nums[mid]) {
                     right = mid - 1;
                 } else {
+                    // 否则只能到(mid, r]区间内找
                     left = mid + 1;
                 }
             } else {

@@ -1,8 +1,9 @@
-package com.dp.algorithm.binarysearch;
+package com.dp.algorithm.binarysearch.rotate;
 
 /**
- * leetcode_剑指offer_11_旋转数组的最小数字_简单
  * leetcode_154_寻找旋转排序数组中的最小值II_困难
+ *
+ * reviewed at 2023.05.29
  *
  * @author liuxucheng
  * @since 2022/8/3
@@ -22,6 +23,8 @@ public class FindMin2 {
      * 1. 当nums[mid] > nums[r]，nums[mid]一定在左有序数组，mid < x，此时需要向右继续查找，l = mid + 1
      * 2. 当nums[mid] < nums[r]，nums[mid]一定在右有序数组，mid >= x，此时需要向左继续查找，r = mid
      * 3. 当nums[mid] == nums[r]，nums[mid]可能在左有序数组，也可能在右有序数组，此时更新r = r - 1，相当于线性遍历
+     *
+     * 只能和nums[r]比较，否则无法处理整体有序的情况
      *
      * @param nums
      * @return
